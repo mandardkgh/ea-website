@@ -1,16 +1,16 @@
 /* ===== CSS CUSTOM PROPERTIES ===== */
 :root {
-  --color-brand:        #00A8C8;
-  --color-brand-dark:   #007A96;
-  --color-brand-deeper: #005A70;
-  --color-text:         #1A2B30;
-  --color-text-muted:   #6B8A96;
+  --color-brand:        #0077A8;
+  --color-brand-dark:   #005A7A;
+  --color-brand-deeper: #003D57;
+  --color-text:         #1A2535;
+  --color-text-muted:   #5A6B7A;
   --color-bg:           #FFFFFF;
-  --color-bg-alt:       #F4F8FA;
-  --color-border:       #E2EEF2;
-  --color-success:      #1E7A48;
+  --color-bg-alt:       #F5F7FA;
+  --color-border:       #E2E8EF;
+  --color-success:      #1E6B45;
   --color-error:        #B91C1C;
-  --font-body: 'Nunito', 'Poppins', system-ui, sans-serif;
+  --font-body: 'Inter', system-ui, sans-serif;
   --text-base: 1.25rem;
   --line-height-body: 1.7;
   --space-1: 0.5rem;
