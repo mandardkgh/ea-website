@@ -1,0 +1,8 @@
+uploads = []
+generated = []
+
+[[outputs]]
+id = "vQ5RVIfe1R_1Lvipr0b0b"
+uri = "file://enabeloapps_website.tar.gz"
+type = "unspecified"
+title = "Enabelo Apps Website — enabeloapps.html (317 KB compressed)"
