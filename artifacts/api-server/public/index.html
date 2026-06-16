@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Enabelo Apps — Accessible Education Platform for Visually Impaired Students</title>
+  <meta name="description" content="Enabelo Apps empowers visually impaired and writing-disabled students to complete academic work and take exams independently using AI-powered voice technology. Patent pending in India.">
+  <meta name="keywords" content="accessible education platform India, scribe alternative exam system India, AI for visually impaired students India, NAAC accessibility compliance tool, inclusive education software India">
+  <meta property="og:title" content="Enabelo Apps — Independence. Dignity. Education.">
+  <meta property="og:description" content="A pioneering accessible educational platform for Visually Impaired and Writing-Disabled Students.">
+  <meta property="og:type" content="website">
+  <meta name="robots" content="index, follow">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <!-- HEADER -->
+  <header class="site-header" role="banner">
+    <nav class="nav-inner" aria-label="Primary navigation">
+      <a href="#" class="nav-logo" onclick="showPage('home')" aria-label="Enabelo Apps — Return to homepage">
+        <img src="/images/logo-enabelo.png" alt="Enabelo Exams" height="42">
+      </a>
+      <button class="nav-toggle" aria-expanded="false" aria-controls="nav-links" onclick="toggleNav()" aria-label="Toggle navigation menu">&#9776;</button>
+      <ul class="nav-links" id="nav-links" role="list">
+        <li><a href="#" onclick="showPage('home');closeNav();" aria-current="page" id="nav-home">Home</a></li>
+        <li><a href="#" onclick="showPage('about');closeNav();">About</a></li>
+        <li><a href="#" onclick="showPage('access');closeNav();">Platform Access</a></li>
+        <li><a href="#" onclick="showPage('impact');closeNav();">Impact &amp; Compliance</a></li>
+        <li><a href="#" onclick="showPage('contact');closeNav();">Contact</a></li>
+      </ul>
+      <div class="nav-cta">
+        <a href="#" class="btn btn-primary" onclick="showPage('contact');closeNav();" style="min-width:120px;font-size:.95rem;padding:.65rem 1.25rem;">Book a Demo</a>
+      </div>
+    </nav>
+  </header>
+
+  <main id="main-content" role="main" tabindex="-1">
+
+    <!-- ===== HOME PAGE ===== -->
+    <div class="page-view active" id="page-home">
+
+      <!-- SECTION 1: HERO -->
+      <section class="hero" aria-labelledby="hero-heading">
+        <div class="hero-inner">
+          <div class="hero-content">
+            <div class="badge-group">
+              <span class="badge">&#127470;&#127475; Built in India</span>
+              <span class="badge">&#128274; Patent Pending (India)</span>
+              <span class="badge">&#127963; Institutional Grade</span>
+            </div>
+            <h1 id="hero-heading">Independence.<br><span>Dignity.</span><br>Education.</h1>
+            <p class="hero-sub">Enabelo Apps empowers visually impaired and writing-disabled students to complete academic work and take exams independently using AI-powered voice technology.</p>
+            <div class="btn-group">
+              <a href="YOUR_CALENDLY_LINK_HERE" target="_blank" rel="noopener" class="btn btn-primary">Book a Demo</a>
+              <a href="#" class="btn btn-secondary" onclick="showPage('contact');">Request Institutional Pilot</a>
+            </div>
+          </div>
+          <div class="hero-image-wrap">
+            <img src="/images/computer-lab.png" alt="Students with visual impairments using Enabelo Apps in a computer lab, wearing headphones and speaking into microphones while working on laptops" loading="eager">
+          </div>
+        </div>
+      </section>
+
+      <!-- EMOTIONAL CORE -->
+      <div class="emotional-core" role="complementary" aria-label="Mission statement">
+        &#8220;Independence in education is not a privilege. It is a right.&#8221;
+      </div>
+      <hr class="teal-divider">
+
+      <!-- SECTION 2: THE PROBLEM -->
+      <section class="section" aria-labelledby="problem-heading">
+        <div class="container">
+          <p class="section-label">The Challenge</p>
+          <h2 id="problem-heading">The Hidden Inequality in Education</h2>
+          <p class="lead" style="margin-bottom:var(--space-6)">Millions of visually impaired and writing-disabled students across India rely on human scribes to complete homework and take exams — a system that is fragile, inconsistent, and compromises dignity.</p>
+          <div class="grid grid-3" role="list">
+            <div class="card" style="text-align:center" role="listitem">
+              <div style="font-size:2.5rem;margin-bottom:.5rem" aria-hidden="true">&#128483;</div>
+              <h4>Privacy Compromise</h4>
+              <p>Students must dictate answers to a third party, undermining academic integrity and emotional privacy.</p>
+            </div>
+            <div class="card" style="text-align:center" role="listitem">
+              <div style="font-size:2.5rem;margin-bottom:.5rem" aria-hidden="true">&#9200;</div>
+              <h4>Unequal Exam Speed</h4>
+              <p>Scribe-dependent students are at the mercy of another person's pace, comprehension, and availability.</p>
+            </div>
+            <div class="card" style="text-align:center" role="listitem">
+              <div style="font-size:2.5rem;margin-bottom:.5rem" aria-hidden="true">&#128517;</div>
+              <h4>Emotional Dependency</h4>
+              <p>Constant reliance on others erodes self-confidence and academic autonomy over time.</p>
+            </div>
+            <div class="card" style="text-align:center" role="listitem">
+              <div style="font-size:2.5rem;margin-bottom:.5rem" aria-hidden="true">&#128203;</div>
+              <h4>Administrative Burden</h4>
+              <p>Institutions must recruit, train, and schedule scribes for every examination — costly and unreliable.</p>
+            </div>
+            <div class="card" style="text-align:center" role="listitem">
+              <div style="font-size:2.5rem;margin-bottom:.5rem" aria-hidden="true">&#128683;</div>
+              <h4>No Independent Homework</h4>
+              <p>Without a scribe, students cannot complete written assignments independently at home.</p>
+            </div>
+            <div class="card" style="text-align:center" role="listitem">
+              <div style="font-size:2.5rem;margin-bottom:.5rem" aria-hidden="true">&#9888;</div>
+              <h4>Compliance Gaps</h4>
+              <p>Many institutions lack documented inclusion practices, creating risk during NAAC audits.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SECTION 3: THE SOLUTION -->
+      <section class="section section-alt" aria-labelledby="solution-heading">
+        <div class="container">
+          <div class="two-col">
+            <div>
+              <p class="section-label">The Solution</p>
+              <h2 id="solution-heading">From Dependency<br>to Self-Reliance</h2>
+              <p style="margin-bottom:var(--space-4)">Enabelo Apps replaces the scribe with AI-powered voice technology. Students listen to questions, speak their answers, and the system converts speech into structured text — no intermediaries, no compromise.</p>
+              <div style="display:flex;flex-wrap:wrap;gap:var(--space-2);margin-bottom:var(--space-4)">
+                <span class="badge" style="font-size:1rem;padding:.5rem 1rem">&#127908; Own Voice</span>
+                <span class="badge" style="font-size:1rem;padding:.5rem 1rem">&#127760; Own Language</span>
+                <span class="badge" style="font-size:1rem;padding:.5rem 1rem">&#9654; Own Pace</span>
+                <span class="badge" style="font-size:1rem;padding:.5rem 1rem">&#9997; Own Expression</span>
+              </div>
+            </div>
+            <div>
+              <div class="flow-steps" role="list" aria-label="How Enabelo Apps works">
+                <div class="flow-step" role="listitem">
+                  <div class="flow-step-num" aria-hidden="true">1</div>
+                  <h4>Listen</h4>
+                  <p>Student hears the question via accessible audio interface</p>
+                </div>
+                <div class="flow-arrow" aria-hidden="true">&#8594;</div>
+                <div class="flow-step" role="listitem">
+                  <div class="flow-step-num" aria-hidden="true">2</div>
+                  <h4>Speak</h4>
+                  <p>Student speaks their answer in their own words at their own pace</p>
+                </div>
+                <div class="flow-arrow" aria-hidden="true">&#8594;</div>
+                <div class="flow-step" role="listitem">
+                  <div class="flow-step-num" aria-hidden="true">3</div>
+                  <h4>Submit</h4>
+                  <p>AI converts speech to structured text and securely submits</p>
+                </div>
+              </div>
+              <div class="highlight-box" style="margin-top:var(--space-4)">
+                <h4>No intermediaries. No compromise.</h4>
+                <p>Every answer is the student's own — their voice, their language, their expression.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SECTION 4: WHY UNIQUE -->
+      <section class="section" aria-labelledby="unique-heading">
+        <div class="container">
+          <div class="two-col" style="align-items:start">
+            <div>
+              <p class="section-label">Our Differentiation</p>
+              <h2 id="unique-heading">Why This Platform Is Different</h2>
+              <ul class="feature-list" aria-label="Key differentiators of Enabelo Apps">
+                <li><span class="fi-icon" aria-hidden="true">&#127941;</span><div><strong>First-of-its-kind in India</strong> — purpose-built for visually impaired and writing-disabled students</div></li>
+                <li><span class="fi-icon" aria-hidden="true">&#128274;</span><div><strong>Patent pending (India)</strong> — Published on the Government of India's IPO portal</div></li>
+                <li><span class="fi-icon" aria-hidden="true">&#127963;</span><div><strong>Built for institutional deployment</strong> — for colleges, schools, and universities at scale</div></li>
+                <li><span class="fi-icon" aria-hidden="true">&#128275;</span><div><strong>Secure exam-ready environment</strong> — controlled, auditable workflow with student authentication</div></li>
+                <li><span class="fi-icon" aria-hidden="true">&#127760;</span><div><strong>Indic language support roadmap</strong> — designed for India's multilingual educational landscape</div></li>
+                <li><span class="fi-icon" aria-hidden="true">&#129302;</span><div><strong>AI-powered voice technology</strong> — advanced speech-to-text built for academic contexts</div></li>
+              </ul>
+            </div>
+            <div>
+              <img src="/images/vi-girl.jpg" alt="A student using Enabelo Apps independently on a mobile phone with earphones in a library setting" style="border-radius:var(--radius-xl);box-shadow:var(--shadow-lg);width:100%" loading="lazy">
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SECTION 5: FOR INSTITUTIONS -->
+      <section class="section section-alt" aria-labelledby="institutions-heading">
+        <div class="container">
+          <p class="section-label">For Administrators</p>
+          <h2 id="institutions-heading">Designed for Colleges and Schools</h2>
+          <p class="lead" style="margin-bottom:var(--space-6)">Enabelo Apps gives institutions complete control over accessible exam delivery — with a powerful admin dashboard that makes deployment simple and audit-ready.</p>
+          <div class="grid grid-3" style="margin-bottom:var(--space-6)">
+            <div class="card"><div class="card-icon" aria-hidden="true">&#128202;</div><h4>Admin Dashboard</h4><p>Centralised control panel for managing students, exams, and usage across the institution.</p></div>
+            <div class="card"><div class="card-icon" aria-hidden="true">&#128100;</div><h4>Student Authentication</h4><p>Secure, verified student access with institutional login integration.</p></div>
+            <div class="card"><div class="card-icon" aria-hidden="true">&#128196;</div><h4>Secure Exam Workflow</h4><p>End-to-end encrypted exam delivery with tamper-proof submission records.</p></div>
+            <div class="card"><div class="card-icon" aria-hidden="true">&#128200;</div><h4>Usage Logs &amp; Reports</h4><p>Detailed audit trails and analytics for compliance and accreditation documentation.</p></div>
+            <div class="card"><div class="card-icon" aria-hidden="true">&#127968;</div><h4>Institutional Data Control</h4><p>Your institution owns its data. No third-party access, no vendor lock-in.</p></div>
+            <div class="card"><div class="card-icon" aria-hidden="true">&#128640;</div><h4>Pilot-Friendly Deployment</h4><p>Start with a single department or exam — scale institution-wide at your pace.</p></div>
+          </div>
+          <div class="naac-box">
+            <h4>&#127979; Supports NAAC Audit Readiness</h4>
+            <p style="margin-bottom:var(--space-3)">Enabelo Apps directly supports your institution's accreditation and inclusion documentation:</p>
+            <div class="grid grid-2" style="gap:var(--space-2)">
+              <div class="align-item"><span class="align-icon" aria-hidden="true">&#9989;</span><span><strong>Accessibility inclusion proof</strong> — documented, auditable records of accessible exam delivery</span></div>
+              <div class="align-item"><span class="align-icon" aria-hidden="true">&#9989;</span><span><strong>Innovation showcase</strong> — demonstrate technology-driven accessibility to NAAC evaluators</span></div>
+              <div class="align-item"><span class="align-icon" aria-hidden="true">&#9989;</span><span><strong>Student empowerment initiative</strong> — quantifiable evidence of inclusive education practice</span></div>
+              <div class="align-item"><span class="align-icon" aria-hidden="true">&#9989;</span><span><strong>Digital transformation evidence</strong> — measurable adoption of assistive technology at scale</span></div>
+            </div>
+            <div style="margin-top:var(--space-3)">
+              <a href="YOUR_CALENDLY_LINK_HERE" target="_blank" rel="noopener" class="btn btn-primary">Schedule a Demo for Your Institution</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SECTION 6: FOR STUDENTS -->
+      <section class="section" aria-labelledby="students-heading">
+        <div class="container">
+          <p class="section-label">For Students</p>
+          <h2 id="students-heading">Designed for Students</h2>
+          <p class="lead" style="margin-bottom:var(--space-6)">Enabelo Apps gives every student the tools to express their knowledge — independently, confidently, and without compromise.</p>
+          <div class="grid grid-3">
+            <div class="card"><div class="card-icon" aria-hidden="true">&#127908;</div><h4>Voice-Based Answering</h4><p>Speak your answers naturally. The AI understands your voice, your accent, your language.</p></div>
+            <div class="card"><div class="card-icon" aria-hidden="true">&#9855;</div><h4>Fully Accessible Interface</h4><p>Screen-reader compatible, high-contrast, keyboard-navigable — built for students with visual impairments from day one.</p></div>
+            <div class="card"><div class="card-icon" aria-hidden="true">&#128218;</div><h4>Independent Assignments</h4><p>Complete homework on your own schedule, without waiting for or depending on another person.</p></div>
+            <div class="card"><div class="card-icon" aria-hidden="true">&#128396;</div><h4>Scribe-Free Exams</h4><p>Appear for exams without a scribe. Your answers, your words, your performance.</p></div>
+            <div class="card"><div class="card-icon" aria-hidden="true">&#128170;</div><h4>Confidence and Dignity</h4><p>Experience the self-assurance that comes from achieving academic goals entirely on your own.</p></div>
+            <div class="card"><div class="card-icon" aria-hidden="true">&#127775;</div><h4>Own Language Support</h4><p>Express yourself in the language you think in, with Indic language support on the roadmap.</p></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SECTION 7: IMPACT & COMPLIANCE -->
+      <section class="section section-alt" aria-labelledby="impact-heading">
+        <div class="container">
+          <p class="section-label">Impact &amp; Alignment</p>
+          <h2 id="impact-heading">Aligned with National and Global Inclusion Goals</h2>
+          <p class="lead" style="margin-bottom:var(--space-6)">Enabelo Apps is not just a product — it is a national inclusion initiative aligned with India's policy frameworks and the United Nations' Sustainable Development Goals.</p>
+          <div class="grid grid-2" style="margin-bottom:var(--space-6)">
+            <div class="sdg-badge" role="img" aria-label="UN SDG 4: Quality Education">
+              <div class="sdg-num sdg-4" aria-hidden="true">4</div>
+              <div><strong>SDG #4 — Quality Education</strong><p style="margin:.25rem 0 0;font-size:1rem;color:var(--color-text-muted)">Ensuring inclusive and equitable quality education for all, including persons with disabilities.</p></div>
+            </div>
+            <div class="sdg-badge" role="img" aria-label="UN SDG 10: Reduced Inequalities">
+              <div class="sdg-num sdg-10" aria-hidden="true">10</div>
+              <div><strong>SDG #10 — Reduced Inequalities</strong><p style="margin:.25rem 0 0;font-size:1rem;color:var(--color-text-muted)">Reducing inequality and promoting inclusion regardless of disability.</p></div>
+            </div>
+          </div>
+          <div class="grid grid-3">
+            <div class="card"><div class="card-icon" aria-hidden="true">&#127470;&#127475;</div><h4>Government of India</h4><p>Aligned with the Rights of Persons with Disabilities Act (RPWD) 2016 and national accessibility mandates.</p></div>
+            <div class="card"><div class="card-icon" aria-hidden="true">&#127979;</div><h4>UGC Inclusion Frameworks</h4><p>Supports University Grants Commission guidelines for equal educational opportunity.</p></div>
+            <div class="card"><div class="card-icon" aria-hidden="true">&#127941;</div><h4>NAAC Accreditation</h4><p>Directly supports NAAC audit criteria on inclusive practices, student welfare, and institutional innovation.</p></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SECTION 8: TRUST & CREDIBILITY -->
+      <section class="section" aria-labelledby="trust-heading">
+        <div class="container">
+          <p class="section-label">Trust &amp; Credibility</p>
+          <h2 id="trust-heading">Built for Long-Term Institutional Impact</h2>
+          <p class="lead" style="margin-bottom:var(--space-2)">Developed by <strong>Zapurzaa Systems Pvt Ltd</strong> — a company focused on Indic language AI and scalable institutional technology. Mission-first, not venture-hype.</p>
+          <a href="https://zapurzaasystems.com" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:.5rem;text-decoration:none;margin-bottom:var(--space-6)" aria-label="Zapurzaa Systems Pvt Ltd website">
+            <img src="/images/logo-zspl.png" alt="Zapurzaa Systems" style="height:30px;width:auto">
+          </a>
+
+          <h3 style="margin-bottom:var(--space-4)">What Institutions and Students Say</h3>
+          <div class="grid grid-2" style="margin-bottom:var(--space-6)">
+            <div class="testimonial-card">
+              <p class="testimonial-text">[Testimonial #1 — content to be provided by the Enabelo Apps team.]</p>
+              <p class="testimonial-author">[Name, Designation]</p>
+              <p class="testimonial-role">[Institution Name, City]</p>
+            </div>
+            <div class="testimonial-card">
+              <p class="testimonial-text">[Testimonial #2 — content to be provided by the Enabelo Apps team.]</p>
+              <p class="testimonial-author">[Name, Designation]</p>
+              <p class="testimonial-role">[Institution Name, City]</p>
+            </div>
+          </div>
+
+          <h3 style="margin-bottom:var(--space-4)">Video Testimonials</h3>
+          <div class="grid grid-2">
+            <div class="video-placeholder" data-youtube-id="YOUTUBE_VIDEO_ID_1" onclick="loadYoutube(this)" role="button" tabindex="0" aria-label="Play video testimonial 1" onkeypress="if(event.key==='Enter')loadYoutube(this)">
+              <div class="play-btn" aria-hidden="true">&#9654;</div>
+              <p>Video Testimonial #1<br><span style="font-size:.875rem;opacity:.7">(YouTube link to be added)</span></p>
+            </div>
+            <div class="video-placeholder" data-youtube-id="YOUTUBE_VIDEO_ID_2" onclick="loadYoutube(this)" role="button" tabindex="0" aria-label="Play video testimonial 2" onkeypress="if(event.key==='Enter')loadYoutube(this)">
+              <div class="play-btn" aria-hidden="true">&#9654;</div>
+              <p>Video Testimonial #2<br><span style="font-size:.875rem;opacity:.7">(YouTube link to be added)</span></p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SECTION 9: FINAL CTA -->
+      <section class="cta-band" aria-labelledby="cta-heading">
+        <div class="container">
+          <h2 id="cta-heading">Let's Build an Inclusive Campus Together</h2>
+          <p>Whether you are a trustee, administrator, disability officer, or policy maker — Enabelo Apps is ready to transform how your institution serves every student.</p>
+          <div class="btn-group" style="justify-content:center">
+            <a href="YOUR_CALENDLY_LINK_HERE" target="_blank" rel="noopener" class="btn btn-white">Book a Demo</a>
+            <a href="#" class="btn btn-outline-white" onclick="showPage('contact')">Request Institutional Pilot</a>
+            <a href="#" class="btn btn-outline-white" onclick="showPage('contact')">Contact Us</a>
+          </div>
+        </div>
+      </section>
+
+    </div><!-- end page-home -->
+
+    <!-- ===== ABOUT PAGE ===== -->
+    <div class="page-view" id="page-about">
+      <section class="section" aria-labelledby="about-heading" style="padding-top:var(--space-8)">
+        <div class="container">
+          <p class="section-label">About</p>
+          <h2 id="about-heading">About Enabelo Apps</h2>
+          <p class="lead" style="margin-bottom:var(--space-6)">A pioneering accessible educational platform for Visually Impaired and Writing-Disabled Students — built in India, for India and the world.</p>
+          <div class="two-col" style="margin-bottom:var(--space-6)">
+            <div>
+              <h3 style="margin-bottom:var(--space-2)">Our Mission</h3>
+              <p style="margin-bottom:var(--space-3)">Enabelo Apps was created from a simple but powerful belief: every student deserves the right to express their knowledge independently. For millions of visually impaired and writing-disabled students in India, that right has long been denied by the scribe system.</p>
+              <p>We replace dependency with technology — giving students their voice, their dignity, and their academic freedom.</p>
+            </div>
+            <div>
+              <h3 style="margin-bottom:var(--space-2)">Developed By</h3>
+              <p style="margin-bottom:var(--space-3)"><strong>Zapurzaa Systems Pvt Ltd</strong> is focused on Indic language AI and accessible technology solutions for India's educational institutions. Enabelo Apps is their flagship product in the inclusive education space.</p>
+              <a href="https://zapurzaasystems.com" target="_blank" rel="noopener" class="btn btn-secondary">Visit Zapurzaa Systems &#8599;</a>
+            </div>
+          </div>
+          <div class="highlight-box" style="margin-bottom:var(--space-4)">
+            <h4>Patent Pending — Government of India</h4>
+            <p>Enabelo Apps has a patent application published on the Government of India's Intellectual Property Office (IPO) portal. This is an India patent filing only.</p>
+          </div>
+          <h3 style="margin-bottom:var(--space-3)">Core Values</h3>
+          <div class="grid grid-3">
+            <div class="card"><div class="card-icon" aria-hidden="true">&#127775;</div><h4>Independence</h4><p>Every student should demonstrate their knowledge without relying on another person.</p></div>
+            <div class="card"><div class="card-icon" aria-hidden="true">&#9876;</div><h4>Dignity</h4><p>Academic assessment should never require a student to sacrifice privacy or self-expression.</p></div>
+            <div class="card"><div class="card-icon" aria-hidden="true">&#127760;</div><h4>Inclusion</h4><p>Quality education must be truly accessible — not as an exception, but as the default.</p></div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- ===== PLATFORM ACCESS PAGE ===== -->
+    <div class="page-view" id="page-access">
+      <section class="section" aria-labelledby="access-heading" style="padding-top:var(--space-8)">
+        <div class="container">
+          <p class="section-label">Platform Access</p>
+          <h2 id="access-heading">Access the Platform</h2>
+          <p class="lead" style="margin-bottom:var(--space-6)">Enabelo Apps has two portals — one for institution administrators and one for students. Both are available via your institution's registered access.</p>
+          <div class="grid grid-2" style="max-width:800px;margin:0 auto var(--space-6)">
+            <div class="access-card">
+              <div class="ac-icon" aria-hidden="true">&#128202;</div>
+              <h3>Admin Portal</h3>
+              <p>For administrators, exam coordinators, and disability support officers.</p>
+              <a href="https://ea.zapurzaasystems.com" target="_blank" rel="noopener" class="btn btn-primary">Open Admin Portal &#8599;</a>
+            </div>
+            <div class="access-card">
+              <div class="ac-icon" aria-hidden="true">&#127891;</div>
+              <h3>Student Portal</h3>
+              <p>For registered students. Complete voice-based assignments and exams independently.</p>
+              <a href="https://ea.zapurzaasystems.com/student" target="_blank" rel="noopener" class="btn btn-secondary">Open Student Portal &#8599;</a>
+            </div>
+          </div>
+          <div class="highlight-box" style="max-width:800px;margin:0 auto">
+            <h4>Institutional Access Only</h4>
+            <p>Access to Enabelo Apps is provisioned through your institution. If your institution is not yet registered, please <a href="#" onclick="showPage('contact')">contact us</a> to request a pilot.</p>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- ===== IMPACT PAGE ===== -->
+    <div class="page-view" id="page-impact">
+      <section class="section" aria-labelledby="impact-page-heading" style="padding-top:var(--space-8)">
+        <div class="container">
+          <p class="section-label">Impact &amp; Compliance</p>
+          <h2 id="impact-page-heading">National and Global Alignment</h2>
+          <p class="lead" style="margin-bottom:var(--space-6)">Every feature, workflow, and data record in Enabelo Apps is designed to support your institution's compliance and accreditation requirements.</p>
+          <h3 style="margin-bottom:var(--space-3)">UN Sustainable Development Goals</h3>
+          <div class="grid grid-2" style="margin-bottom:var(--space-6)">
+            <div class="sdg-badge"><div class="sdg-num sdg-4" aria-hidden="true">4</div><div><strong>SDG #4 — Quality Education</strong><p style="margin:.25rem 0 0;font-size:1rem;color:var(--color-text-muted)">Inclusive, equitable quality education for all persons, including those with disabilities.</p></div></div>
+            <div class="sdg-badge"><div class="sdg-num sdg-10" aria-hidden="true">10</div><div><strong>SDG #10 — Reduced Inequalities</strong><p style="margin:.25rem 0 0;font-size:1rem;color:var(--color-text-muted)">Promoting social inclusion regardless of disability status.</p></div></div>
+          </div>
+          <h3 style="margin-bottom:var(--space-3)">National Policy Alignment</h3>
+          <div class="grid grid-3" style="margin-bottom:var(--space-6)">
+            <div class="card"><div class="card-icon" aria-hidden="true">&#127470;&#127475;</div><h4>RPWD Act 2016</h4><p>Enabelo Apps supports the legislative mandate for accessible education under the Rights of Persons with Disabilities Act.</p></div>
+            <div class="card"><div class="card-icon" aria-hidden="true">&#127979;</div><h4>UGC Guidelines</h4><p>University Grants Commission frameworks for equal educational opportunity and accessible campus policies.</p></div>
+            <div class="card"><div class="card-icon" aria-hidden="true">&#127941;</div><h4>NAAC Accreditation</h4><p>Audit-ready usage logs, inclusion documentation, and digital innovation evidence for NAAC evaluators.</p></div>
+          </div>
+          <div class="naac-box">
+            <h4>NAAC Audit Support — What We Provide</h4>
+            <p style="margin-bottom:var(--space-3)">When your institution uses Enabelo Apps, you have documented evidence for:</p>
+            <ul class="feature-list">
+              <li><span class="fi-icon" aria-hidden="true">&#9989;</span><span>Accessibility inclusion practices with quantified student participation data</span></li>
+              <li><span class="fi-icon" aria-hidden="true">&#9989;</span><span>Technology-driven innovation in student support services</span></li>
+              <li><span class="fi-icon" aria-hidden="true">&#9989;</span><span>Digital transformation of traditionally manual exam accommodation processes</span></li>
+              <li><span class="fi-icon" aria-hidden="true">&#9989;</span><span>Student empowerment and welfare initiatives with measurable outcomes</span></li>
+            </ul>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- ===== CONTACT PAGE ===== -->
+    <div class="page-view" id="page-contact">
+      <section class="section" aria-labelledby="contact-heading" style="padding-top:var(--space-8)">
+        <div class="container">
+          <p class="section-label">Get In Touch</p>
+          <h2 id="contact-heading">Contact &amp; Demo Requests</h2>
+          <p class="lead" style="margin-bottom:var(--space-6);max-width:52ch">Ready to explore Enabelo Apps for your institution? Fill in the form below and our team will respond within 1 business day.</p>
+          <div id="contact-form" style="scroll-margin-top:80px">
+            <div class="form-wrap">
+              <div class="form-success" id="form-success" role="alert">&#10004; Thank you! Your message has been received. We will be in touch within 1 business day.</div>
+              <form action="https://formspree.io/f/YOUR_FORMSPREE_ID" method="POST" id="contact-form-el" novalidate aria-label="Contact and demo request form">
+                <input type="hidden" name="_subject" value="Enabelo Apps — Demo/Contact Request">
+                <div class="form-group">
+                  <label class="form-label" for="f-name">Full Name <span class="req" aria-label="required">*</span></label>
+                  <input class="form-input" type="text" id="f-name" name="name" required autocomplete="name" placeholder="Your full name">
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="f-institution">Institution / Organisation <span class="req" aria-label="required">*</span></label>
+                  <input class="form-input" type="text" id="f-institution" name="institution" required placeholder="Name of your school, college or organisation">
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="f-role">Your Role <span class="req" aria-label="required">*</span></label>
+                  <input class="form-input" type="text" id="f-role" name="role" required placeholder="e.g. Principal, Disability Support Officer, Trustee">
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="f-email">Email Address <span class="req" aria-label="required">*</span></label>
+                  <input class="form-input" type="email" id="f-email" name="email" required autocomplete="email" placeholder="your@institution.edu">
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="f-phone">Phone Number</label>
+                  <input class="form-input" type="tel" id="f-phone" name="phone" autocomplete="tel" placeholder="+91 XXXXX XXXXX">
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="f-message">Message</label>
+                  <textarea class="form-input" id="f-message" name="message" rows="4" placeholder="Tell us about your institution and what you are looking for..."></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary" style="width:100%;justify-content:center">Send Message &#8594;</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- ===== PRIVACY PAGE ===== -->
+    <div class="page-view" id="page-privacy">
+      <div class="coming-soon-page">
+        <div class="cs-icon" aria-hidden="true">&#128274;</div>
+        <h2>Privacy Policy</h2>
+        <p>Our full Privacy Policy is being finalised. Please check back soon, or contact us for any data-related questions.</p>
+        <a href="mailto:info@enabeloapps.com" class="btn btn-primary">Contact Us</a>
+      </div>
+    </div>
+
+    <!-- ===== TERMS PAGE ===== -->
+    <div class="page-view" id="page-terms">
+      <div class="coming-soon-page">
+        <div class="cs-icon" aria-hidden="true">&#128203;</div>
+        <h2>Terms of Service</h2>
+        <p>Our Terms of Service are being prepared. Contact us if you have any questions.</p>
+        <a href="mailto:info@enabeloapps.com" class="btn btn-primary">Contact Us</a>
+      </div>
+    </div>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <img src="/images/logo-enabelo.png" alt="Enabelo Exams" style="height:38px;width:auto;filter:brightness(0) invert(1);opacity:.9;margin-bottom:var(--space-2)">
+          <p class="footer-brand-desc">A pioneering accessible educational platform for Visually Impaired and Writing-Disabled Students. Built in India by Zapurzaa Systems Pvt Ltd.</p>
+          <div class="social-links" aria-label="Social media links">
+            <a href="#" aria-label="LinkedIn">in</a>
+            <a href="#" aria-label="Twitter">&#120143;</a>
+            <a href="#" aria-label="YouTube">&#9654;</a>
+          </div>
+        </div>
+        <div>
+          <h5>About</h5>
+          <ul class="footer-links">
+            <li><a href="#" onclick="showPage('about')">About Enabelo</a></li>
+            <li><a href="#" onclick="showPage('impact')">Impact &amp; Compliance</a></li>
+            <li><a href="https://zapurzaasystems.com" target="_blank" rel="noopener">Zapurzaa Systems</a></li>
+          </ul>
+        </div>
+        <div>
+          <h5>Modules</h5>
+          <ul class="footer-links">
+            <li><a href="https://ea.zapurzaasystems.com" target="_blank" rel="noopener">Admin Portal &#8599;</a></li>
+            <li><a href="https://ea.zapurzaasystems.com/student" target="_blank" rel="noopener">Student Portal &#8599;</a></li>
+            <li><a href="#" onclick="showPage('access')">Platform Access</a></li>
+          </ul>
+        </div>
+        <div>
+          <h5>Contact</h5>
+          <ul class="footer-links">
+            <li><a href="#" onclick="showPage('contact')">Book a Demo</a></li>
+            <li><a href="#" onclick="showPage('contact')">Request a Pilot</a></li>
+            <li><a href="mailto:info@enabeloapps.com">info@enabeloapps.com</a></li>
+            <li><a href="#" onclick="showPage('privacy')">Privacy Policy</a></li>
+            <li><a href="#" onclick="showPage('terms')">Terms of Service</a></li>
+          </ul>
+        </div>
+      </div>
+      <hr class="footer-divider">
+      <div class="footer-bottom">
+        <span>&copy; 2026&ndash;2030 Zapurzaa Systems Pvt Ltd. All rights reserved.</span>
+        <a href="https://zapurzaasystems.com" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:.5rem;text-decoration:none">
+          <img src="/images/logo-zspl.png" alt="Zapurzaa Systems" style="height:20px;width:auto;opacity:.8">
+        </a>
+        <span>&#127470;&#127475; Made with purpose in India</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/js/main.js"></script>
+</body>
+</html>

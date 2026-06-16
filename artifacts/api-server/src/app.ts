@@ -32,12 +32,10 @@ app.use(express.urlencoded({ extended: true }));
 
 app.use("/api", router);
 
-app.get("/", (_req, res) => {
-  res.sendFile(path.resolve(__dirname, "../enabeloapps.html"));
-});
+app.use(express.static(path.resolve(__dirname, "../public")));
 
-app.get("/api/preview", (_req, res) => {
-  res.sendFile(path.resolve(__dirname, "../enabeloapps.html"));
+app.get("/", (_req, res) => {
+  res.sendFile(path.resolve(__dirname, "../public/index.html"));
 });
 
 export default app;
