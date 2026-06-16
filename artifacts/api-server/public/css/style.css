@@ -169,7 +169,7 @@ h4 { font-size: 1.1rem; font-weight: 700; }
   padding: 0.75rem var(--space-4); max-width: 1200px; margin: 0 auto; gap: var(--space-4);
 }
 .nav-logo { display: flex; align-items: center; text-decoration: none; }
-.nav-logo img { height: 52px; width: auto; }
+.nav-logo img { height: 64px; width: auto; }
 .nav-links { display: flex; align-items: center; gap: var(--space-3); list-style: none; }
 .nav-links a {
   font-weight: 600; font-size: 0.95rem; color: var(--color-text);
@@ -179,6 +179,22 @@ h4 { font-size: 1.1rem; font-weight: 700; }
 }
 .nav-links a:hover,
 .nav-links a[aria-current="page"] { color: var(--color-brand-dark); border-bottom-color: var(--color-brand); }
+
+.nav-module-link {
+  color: var(--color-brand-dark) !important;
+  font-weight: 700 !important;
+  border: 1.5px solid var(--color-brand-dark) !important;
+  border-bottom: 1.5px solid var(--color-brand-dark) !important;
+  border-radius: var(--radius-sm) !important;
+  padding: 0.25rem 0.65rem !important;
+  font-size: 0.875rem !important;
+  transition: background var(--tr-fast), color var(--tr-fast) !important;
+}
+.nav-module-link:hover {
+  background: var(--color-brand-dark) !important;
+  color: #fff !important;
+  border-color: var(--color-brand-dark) !important;
+}
 .nav-toggle {
   display: none; background: none; border: 2px solid var(--color-brand-dark);
   border-radius: var(--radius-sm); padding: 0.5rem; cursor: pointer;

@@ -22,13 +22,14 @@
   <header class="site-header" role="banner">
     <nav class="nav-inner" aria-label="Primary navigation">
       <a href="#" class="nav-logo" onclick="showPage('home')" aria-label="Enabelo Apps — Return to homepage">
-        <img src="/images/logo-enabelo.png" alt="Enabelo Exams" height="52">
+        <img src="/images/logo-enabelo.png" alt="Enabelo Exams" height="64">
       </a>
       <button class="nav-toggle" aria-expanded="false" aria-controls="nav-links" onclick="toggleNav()" aria-label="Toggle navigation menu">&#9776;</button>
       <ul class="nav-links" id="nav-links" role="list">
         <li><a href="#" onclick="showPage('home');closeNav();" aria-current="page" id="nav-home">Home</a></li>
         <li><a href="#" onclick="showPage('about');closeNav();">About</a></li>
-        <li><a href="#" onclick="showPage('access');closeNav();">Platform Access</a></li>
+        <li><a href="https://ea.zapurzaasystems.com" target="_blank" rel="noopener" onclick="closeNav();" class="nav-module-link" aria-label="Admin Module — opens in new tab">Admin Module &#8599;</a></li>
+        <li><a href="https://ea.zapurzaasystems.com/student" target="_blank" rel="noopener" onclick="closeNav();" class="nav-module-link" aria-label="Student Module — opens in new tab">Student Module &#8599;</a></li>
         <li><a href="#" onclick="showPage('impact');closeNav();">Impact &amp; Compliance</a></li>
         <li><a href="#" onclick="showPage('contact');closeNav();">Contact</a></li>
       </ul>
