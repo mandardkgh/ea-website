@@ -22,7 +22,7 @@
   <header class="site-header" role="banner">
     <nav class="nav-inner" aria-label="Primary navigation">
       <a href="#" class="nav-logo" onclick="showPage('home')" aria-label="Enabelo Apps — Return to homepage">
-        <img src="/images/logo-enabelo.png" alt="Enabelo Exams" height="42">
+        <img src="/images/logo-enabelo.png" alt="Enabelo Exams" height="52">
       </a>
       <button class="nav-toggle" aria-expanded="false" aria-controls="nav-links" onclick="toggleNav()" aria-label="Toggle navigation menu">&#9776;</button>
       <ul class="nav-links" id="nav-links" role="list">
@@ -33,7 +33,7 @@
         <li><a href="#" onclick="showPage('contact');closeNav();">Contact</a></li>
       </ul>
       <div class="nav-cta">
-        <a href="#" class="btn btn-primary" onclick="showPage('contact');closeNav();" style="min-width:120px;font-size:.95rem;padding:.65rem 1.25rem;">Book a Demo</a>
+        <a href="#" class="btn btn-primary" onclick="showPage('contact');closeNav();" style="font-size:.9rem;padding:.65rem 1.25rem;min-width:0;">Book a Demo</a>
       </div>
     </nav>
   </header>
@@ -47,10 +47,21 @@
       <section class="hero" aria-labelledby="hero-heading">
         <div class="hero-inner">
           <div class="hero-content">
-            <div class="badge-group">
-              <span class="badge">&#127470;&#127475; Built in India</span>
-              <span class="badge">&#128274; Patent Pending (India)</span>
-              <span class="badge">&#127963; Institutional Grade</span>
+            <div class="hero-credentials">
+              <span class="hero-cred">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                Built in India
+              </span>
+              <span class="cred-sep">|</span>
+              <span class="hero-cred">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                Patent Pending (India)
+              </span>
+              <span class="cred-sep">|</span>
+              <span class="hero-cred">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                Institutional Grade
+              </span>
             </div>
             <h1 id="hero-heading">Independence.<br><span>Dignity.</span><br>Education.</h1>
             <p class="hero-sub">Enabelo Apps empowers visually impaired and writing-disabled students to complete academic work and take exams independently using AI-powered voice technology.</p>
@@ -78,33 +89,45 @@
           <h2 id="problem-heading">The Hidden Inequality in Education</h2>
           <p class="lead" style="margin-bottom:var(--space-6)">Millions of visually impaired and writing-disabled students across India rely on human scribes to complete homework and take exams — a system that is fragile, inconsistent, and compromises dignity.</p>
           <div class="grid grid-3" role="list">
-            <div class="card" style="text-align:center" role="listitem">
-              <div style="font-size:2.5rem;margin-bottom:.5rem" aria-hidden="true">&#128483;</div>
+            <div class="card" role="listitem">
+              <div class="card-icon" aria-hidden="true">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M17.94 17.94A10.07 10.07 0 0 1 12 20c-7 0-11-8-11-8a18.45 18.45 0 0 1 5.06-5.94M9.9 4.24A9.12 9.12 0 0 1 12 4c7 0 11 8 11 8a18.5 18.5 0 0 1-2.16 3.19m-6.72-1.07a3 3 0 1 1-4.24-4.24"/><line x1="1" y1="1" x2="23" y2="23"/></svg>
+              </div>
               <h4>Privacy Compromise</h4>
               <p>Students must dictate answers to a third party, undermining academic integrity and emotional privacy.</p>
             </div>
-            <div class="card" style="text-align:center" role="listitem">
-              <div style="font-size:2.5rem;margin-bottom:.5rem" aria-hidden="true">&#9200;</div>
+            <div class="card" role="listitem">
+              <div class="card-icon" aria-hidden="true">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+              </div>
               <h4>Unequal Exam Speed</h4>
               <p>Scribe-dependent students are at the mercy of another person's pace, comprehension, and availability.</p>
             </div>
-            <div class="card" style="text-align:center" role="listitem">
-              <div style="font-size:2.5rem;margin-bottom:.5rem" aria-hidden="true">&#128517;</div>
+            <div class="card" role="listitem">
+              <div class="card-icon" aria-hidden="true">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="8.5" cy="7" r="4"/><line x1="18" y1="8" x2="23" y2="13"/><line x1="23" y1="8" x2="18" y2="13"/></svg>
+              </div>
               <h4>Emotional Dependency</h4>
               <p>Constant reliance on others erodes self-confidence and academic autonomy over time.</p>
             </div>
-            <div class="card" style="text-align:center" role="listitem">
-              <div style="font-size:2.5rem;margin-bottom:.5rem" aria-hidden="true">&#128203;</div>
+            <div class="card" role="listitem">
+              <div class="card-icon" aria-hidden="true">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+              </div>
               <h4>Administrative Burden</h4>
               <p>Institutions must recruit, train, and schedule scribes for every examination — costly and unreliable.</p>
             </div>
-            <div class="card" style="text-align:center" role="listitem">
-              <div style="font-size:2.5rem;margin-bottom:.5rem" aria-hidden="true">&#128683;</div>
+            <div class="card" role="listitem">
+              <div class="card-icon" aria-hidden="true">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="4.93" y1="4.93" x2="19.07" y2="19.07"/></svg>
+              </div>
               <h4>No Independent Homework</h4>
               <p>Without a scribe, students cannot complete written assignments independently at home.</p>
             </div>
-            <div class="card" style="text-align:center" role="listitem">
-              <div style="font-size:2.5rem;margin-bottom:.5rem" aria-hidden="true">&#9888;</div>
+            <div class="card" role="listitem">
+              <div class="card-icon" aria-hidden="true">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+              </div>
               <h4>Compliance Gaps</h4>
               <p>Many institutions lack documented inclusion practices, creating risk during NAAC audits.</p>
             </div>
@@ -121,10 +144,10 @@
               <h2 id="solution-heading">From Dependency<br>to Self-Reliance</h2>
               <p style="margin-bottom:var(--space-4)">Enabelo Apps replaces the scribe with AI-powered voice technology. Students listen to questions, speak their answers, and the system converts speech into structured text — no intermediaries, no compromise.</p>
               <div style="display:flex;flex-wrap:wrap;gap:var(--space-2);margin-bottom:var(--space-4)">
-                <span class="badge" style="font-size:1rem;padding:.5rem 1rem">&#127908; Own Voice</span>
-                <span class="badge" style="font-size:1rem;padding:.5rem 1rem">&#127760; Own Language</span>
-                <span class="badge" style="font-size:1rem;padding:.5rem 1rem">&#9654; Own Pace</span>
-                <span class="badge" style="font-size:1rem;padding:.5rem 1rem">&#9997; Own Expression</span>
+                <span style="display:inline-flex;align-items:center;gap:.4rem;font-size:.9rem;font-weight:700;color:var(--color-brand-deeper);background:rgba(0,119,168,.08);padding:.4rem .9rem;border-radius:4px">Own Voice</span>
+                <span style="display:inline-flex;align-items:center;gap:.4rem;font-size:.9rem;font-weight:700;color:var(--color-brand-deeper);background:rgba(0,119,168,.08);padding:.4rem .9rem;border-radius:4px">Own Language</span>
+                <span style="display:inline-flex;align-items:center;gap:.4rem;font-size:.9rem;font-weight:700;color:var(--color-brand-deeper);background:rgba(0,119,168,.08);padding:.4rem .9rem;border-radius:4px">Own Pace</span>
+                <span style="display:inline-flex;align-items:center;gap:.4rem;font-size:.9rem;font-weight:700;color:var(--color-brand-deeper);background:rgba(0,119,168,.08);padding:.4rem .9rem;border-radius:4px">Own Expression</span>
               </div>
             </div>
             <div>
@@ -164,12 +187,30 @@
               <p class="section-label">Our Differentiation</p>
               <h2 id="unique-heading">Why This Platform Is Different</h2>
               <ul class="feature-list" aria-label="Key differentiators of Enabelo Apps">
-                <li><span class="fi-icon" aria-hidden="true">&#127941;</span><div><strong>First-of-its-kind in India</strong> — purpose-built for visually impaired and writing-disabled students</div></li>
-                <li><span class="fi-icon" aria-hidden="true">&#128274;</span><div><strong>Patent pending (India)</strong> — Published on the Government of India's IPO portal</div></li>
-                <li><span class="fi-icon" aria-hidden="true">&#127963;</span><div><strong>Built for institutional deployment</strong> — for colleges, schools, and universities at scale</div></li>
-                <li><span class="fi-icon" aria-hidden="true">&#128275;</span><div><strong>Secure exam-ready environment</strong> — controlled, auditable workflow with student authentication</div></li>
-                <li><span class="fi-icon" aria-hidden="true">&#127760;</span><div><strong>Indic language support roadmap</strong> — designed for India's multilingual educational landscape</div></li>
-                <li><span class="fi-icon" aria-hidden="true">&#129302;</span><div><strong>AI-powered voice technology</strong> — advanced speech-to-text built for academic contexts</div></li>
+                <li>
+                  <span class="fi-icon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="6"/><path d="M15.477 12.89L17 22l-5-3-5 3 1.523-9.11"/></svg></span>
+                  <div><strong>First-of-its-kind in India</strong> — purpose-built for visually impaired and writing-disabled students</div>
+                </li>
+                <li>
+                  <span class="fi-icon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg></span>
+                  <div><strong>Patent pending (India)</strong> — Published on the Government of India's IPO portal</div>
+                </li>
+                <li>
+                  <span class="fi-icon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg></span>
+                  <div><strong>Built for institutional deployment</strong> — for colleges, schools, and universities at scale</div>
+                </li>
+                <li>
+                  <span class="fi-icon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg></span>
+                  <div><strong>Secure exam-ready environment</strong> — controlled, auditable workflow with student authentication</div>
+                </li>
+                <li>
+                  <span class="fi-icon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg></span>
+                  <div><strong>Indic language support roadmap</strong> — designed for India's multilingual educational landscape</div>
+                </li>
+                <li>
+                  <span class="fi-icon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="16" height="16" rx="2" ry="2"/><rect x="9" y="9" width="6" height="6"/><line x1="9" y1="1" x2="9" y2="4"/><line x1="15" y1="1" x2="15" y2="4"/><line x1="9" y1="20" x2="9" y2="23"/><line x1="15" y1="20" x2="15" y2="23"/><line x1="20" y1="9" x2="23" y2="9"/><line x1="20" y1="14" x2="23" y2="14"/><line x1="1" y1="9" x2="4" y2="9"/><line x1="1" y1="14" x2="4" y2="14"/></svg></span>
+                  <div><strong>AI-powered voice technology</strong> — advanced speech-to-text built for academic contexts</div>
+                </li>
               </ul>
             </div>
             <div>
@@ -186,21 +227,69 @@
           <h2 id="institutions-heading">Designed for Colleges and Schools</h2>
           <p class="lead" style="margin-bottom:var(--space-6)">Enabelo Apps gives institutions complete control over accessible exam delivery — with a powerful admin dashboard that makes deployment simple and audit-ready.</p>
           <div class="grid grid-3" style="margin-bottom:var(--space-6)">
-            <div class="card"><div class="card-icon" aria-hidden="true">&#128202;</div><h4>Admin Dashboard</h4><p>Centralised control panel for managing students, exams, and usage across the institution.</p></div>
-            <div class="card"><div class="card-icon" aria-hidden="true">&#128100;</div><h4>Student Authentication</h4><p>Secure, verified student access with institutional login integration.</p></div>
-            <div class="card"><div class="card-icon" aria-hidden="true">&#128196;</div><h4>Secure Exam Workflow</h4><p>End-to-end encrypted exam delivery with tamper-proof submission records.</p></div>
-            <div class="card"><div class="card-icon" aria-hidden="true">&#128200;</div><h4>Usage Logs &amp; Reports</h4><p>Detailed audit trails and analytics for compliance and accreditation documentation.</p></div>
-            <div class="card"><div class="card-icon" aria-hidden="true">&#127968;</div><h4>Institutional Data Control</h4><p>Your institution owns its data. No third-party access, no vendor lock-in.</p></div>
-            <div class="card"><div class="card-icon" aria-hidden="true">&#128640;</div><h4>Pilot-Friendly Deployment</h4><p>Start with a single department or exam — scale institution-wide at your pace.</p></div>
+            <div class="card">
+              <div class="card-icon" aria-hidden="true">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
+              </div>
+              <h4>Admin Dashboard</h4>
+              <p>Centralised control panel for managing students, exams, and usage across the institution.</p>
+            </div>
+            <div class="card">
+              <div class="card-icon" aria-hidden="true">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="8.5" cy="7" r="4"/><polyline points="17 11 19 13 23 9"/></svg>
+              </div>
+              <h4>Student Authentication</h4>
+              <p>Secure, verified student access with institutional login integration.</p>
+            </div>
+            <div class="card">
+              <div class="card-icon" aria-hidden="true">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><rect x="8" y="12" width="8" height="6" rx="1"/><path d="M10 12V9a2 2 0 0 1 4 0v3"/></svg>
+              </div>
+              <h4>Secure Exam Workflow</h4>
+              <p>End-to-end encrypted exam delivery with tamper-proof submission records.</p>
+            </div>
+            <div class="card">
+              <div class="card-icon" aria-hidden="true">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>
+              </div>
+              <h4>Usage Logs &amp; Reports</h4>
+              <p>Detailed audit trails and analytics for compliance and accreditation documentation.</p>
+            </div>
+            <div class="card">
+              <div class="card-icon" aria-hidden="true">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/></svg>
+              </div>
+              <h4>Institutional Data Control</h4>
+              <p>Your institution owns its data. No third-party access, no vendor lock-in.</p>
+            </div>
+            <div class="card">
+              <div class="card-icon" aria-hidden="true">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M22.65 14.39L12 22.13 1.35 14.39a.84.84 0 0 1-.3-.94l1.22-3.78 2.44-7.51A.42.42 0 0 1 4.82 2a.43.43 0 0 1 .58 0 .42.42 0 0 1 .11.18l2.44 7.49h8.1l2.44-7.51A.42.42 0 0 1 18.6 2a.43.43 0 0 1 .58 0 .42.42 0 0 1 .11.18l2.44 7.51L23 13.45a.84.84 0 0 1-.35.94z"/></svg>
+              </div>
+              <h4>Pilot-Friendly Deployment</h4>
+              <p>Start with a single department or exam — scale institution-wide at your pace.</p>
+            </div>
           </div>
           <div class="naac-box">
-            <h4>&#127979; Supports NAAC Audit Readiness</h4>
+            <h4>Supports NAAC Audit Readiness</h4>
             <p style="margin-bottom:var(--space-3)">Enabelo Apps directly supports your institution's accreditation and inclusion documentation:</p>
             <div class="grid grid-2" style="gap:var(--space-2)">
-              <div class="align-item"><span class="align-icon" aria-hidden="true">&#9989;</span><span><strong>Accessibility inclusion proof</strong> — documented, auditable records of accessible exam delivery</span></div>
-              <div class="align-item"><span class="align-icon" aria-hidden="true">&#9989;</span><span><strong>Innovation showcase</strong> — demonstrate technology-driven accessibility to NAAC evaluators</span></div>
-              <div class="align-item"><span class="align-icon" aria-hidden="true">&#9989;</span><span><strong>Student empowerment initiative</strong> — quantifiable evidence of inclusive education practice</span></div>
-              <div class="align-item"><span class="align-icon" aria-hidden="true">&#9989;</span><span><strong>Digital transformation evidence</strong> — measurable adoption of assistive technology at scale</span></div>
+              <div class="align-item">
+                <span class="align-icon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg></span>
+                <span><strong>Accessibility inclusion proof</strong> — documented, auditable records of accessible exam delivery</span>
+              </div>
+              <div class="align-item">
+                <span class="align-icon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg></span>
+                <span><strong>Innovation showcase</strong> — demonstrate technology-driven accessibility to NAAC evaluators</span>
+              </div>
+              <div class="align-item">
+                <span class="align-icon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg></span>
+                <span><strong>Student empowerment initiative</strong> — quantifiable evidence of inclusive education practice</span>
+              </div>
+              <div class="align-item">
+                <span class="align-icon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg></span>
+                <span><strong>Digital transformation evidence</strong> — measurable adoption of assistive technology at scale</span>
+              </div>
             </div>
             <div style="margin-top:var(--space-3)">
               <a href="YOUR_CALENDLY_LINK_HERE" target="_blank" rel="noopener" class="btn btn-primary">Schedule a Demo for Your Institution</a>
@@ -216,12 +305,48 @@
           <h2 id="students-heading">Designed for Students</h2>
           <p class="lead" style="margin-bottom:var(--space-6)">Enabelo Apps gives every student the tools to express their knowledge — independently, confidently, and without compromise.</p>
           <div class="grid grid-3">
-            <div class="card"><div class="card-icon" aria-hidden="true">&#127908;</div><h4>Voice-Based Answering</h4><p>Speak your answers naturally. The AI understands your voice, your accent, your language.</p></div>
-            <div class="card"><div class="card-icon" aria-hidden="true">&#9855;</div><h4>Fully Accessible Interface</h4><p>Screen-reader compatible, high-contrast, keyboard-navigable — built for students with visual impairments from day one.</p></div>
-            <div class="card"><div class="card-icon" aria-hidden="true">&#128218;</div><h4>Independent Assignments</h4><p>Complete homework on your own schedule, without waiting for or depending on another person.</p></div>
-            <div class="card"><div class="card-icon" aria-hidden="true">&#128396;</div><h4>Scribe-Free Exams</h4><p>Appear for exams without a scribe. Your answers, your words, your performance.</p></div>
-            <div class="card"><div class="card-icon" aria-hidden="true">&#128170;</div><h4>Confidence and Dignity</h4><p>Experience the self-assurance that comes from achieving academic goals entirely on your own.</p></div>
-            <div class="card"><div class="card-icon" aria-hidden="true">&#127775;</div><h4>Own Language Support</h4><p>Express yourself in the language you think in, with Indic language support on the roadmap.</p></div>
+            <div class="card">
+              <div class="card-icon" aria-hidden="true">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/><line x1="12" y1="19" x2="12" y2="23"/><line x1="8" y1="23" x2="16" y2="23"/></svg>
+              </div>
+              <h4>Voice-Based Answering</h4>
+              <p>Speak your answers naturally. The AI understands your voice, your accent, your language.</p>
+            </div>
+            <div class="card">
+              <div class="card-icon" aria-hidden="true">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 8v4"/><path d="M12 16h.01"/><circle cx="12" cy="12" r="1"/><path d="M4.93 4.93l14.14 14.14" style="display:none"/><path d="M2 12h4M18 12h4M12 2v4M12 18v4"/></svg>
+              </div>
+              <h4>Fully Accessible Interface</h4>
+              <p>Screen-reader compatible, high-contrast, keyboard-navigable — built for students with visual impairments from day one.</p>
+            </div>
+            <div class="card">
+              <div class="card-icon" aria-hidden="true">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
+              </div>
+              <h4>Independent Assignments</h4>
+              <p>Complete homework on your own schedule, without waiting for or depending on another person.</p>
+            </div>
+            <div class="card">
+              <div class="card-icon" aria-hidden="true">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
+              </div>
+              <h4>Scribe-Free Exams</h4>
+              <p>Appear for exams without a scribe. Your answers, your words, your performance.</p>
+            </div>
+            <div class="card">
+              <div class="card-icon" aria-hidden="true">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+              </div>
+              <h4>Confidence and Dignity</h4>
+              <p>Experience the self-assurance that comes from achieving academic goals entirely on your own.</p>
+            </div>
+            <div class="card">
+              <div class="card-icon" aria-hidden="true">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+              </div>
+              <h4>Own Language Support</h4>
+              <p>Express yourself in the language you think in, with Indic language support on the roadmap.</p>
+            </div>
           </div>
         </div>
       </section>
@@ -235,17 +360,35 @@
           <div class="grid grid-2" style="margin-bottom:var(--space-6)">
             <div class="sdg-badge" role="img" aria-label="UN SDG 4: Quality Education">
               <div class="sdg-num sdg-4" aria-hidden="true">4</div>
-              <div><strong>SDG #4 — Quality Education</strong><p style="margin:.25rem 0 0;font-size:1rem;color:var(--color-text-muted)">Ensuring inclusive and equitable quality education for all, including persons with disabilities.</p></div>
+              <div><strong>SDG #4 — Quality Education</strong><p style="margin:.25rem 0 0;font-size:.95rem;color:var(--color-text-muted)">Ensuring inclusive and equitable quality education for all, including persons with disabilities.</p></div>
             </div>
             <div class="sdg-badge" role="img" aria-label="UN SDG 10: Reduced Inequalities">
               <div class="sdg-num sdg-10" aria-hidden="true">10</div>
-              <div><strong>SDG #10 — Reduced Inequalities</strong><p style="margin:.25rem 0 0;font-size:1rem;color:var(--color-text-muted)">Reducing inequality and promoting inclusion regardless of disability.</p></div>
+              <div><strong>SDG #10 — Reduced Inequalities</strong><p style="margin:.25rem 0 0;font-size:.95rem;color:var(--color-text-muted)">Reducing inequality and promoting inclusion regardless of disability.</p></div>
             </div>
           </div>
           <div class="grid grid-3">
-            <div class="card"><div class="card-icon" aria-hidden="true">&#127470;&#127475;</div><h4>Government of India</h4><p>Aligned with the Rights of Persons with Disabilities Act (RPWD) 2016 and national accessibility mandates.</p></div>
-            <div class="card"><div class="card-icon" aria-hidden="true">&#127979;</div><h4>UGC Inclusion Frameworks</h4><p>Supports University Grants Commission guidelines for equal educational opportunity.</p></div>
-            <div class="card"><div class="card-icon" aria-hidden="true">&#127941;</div><h4>NAAC Accreditation</h4><p>Directly supports NAAC audit criteria on inclusive practices, student welfare, and institutional innovation.</p></div>
+            <div class="card">
+              <div class="card-icon" aria-hidden="true">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"/><line x1="4" y1="22" x2="4" y2="15"/></svg>
+              </div>
+              <h4>Government of India</h4>
+              <p>Aligned with the Rights of Persons with Disabilities Act (RPWD) 2016 and national accessibility mandates.</p>
+            </div>
+            <div class="card">
+              <div class="card-icon" aria-hidden="true">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
+              </div>
+              <h4>UGC Inclusion Frameworks</h4>
+              <p>Supports University Grants Commission guidelines for equal educational opportunity.</p>
+            </div>
+            <div class="card">
+              <div class="card-icon" aria-hidden="true">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="6"/><path d="M15.477 12.89L17 22l-5-3-5 3 1.523-9.11"/></svg>
+              </div>
+              <h4>NAAC Accreditation</h4>
+              <p>Directly supports NAAC audit criteria on inclusive practices, student welfare, and institutional innovation.</p>
+            </div>
           </div>
         </div>
       </section>
@@ -257,7 +400,7 @@
           <h2 id="trust-heading">Built for Long-Term Institutional Impact</h2>
           <p class="lead" style="margin-bottom:var(--space-2)">Developed by <strong>Zapurzaa Systems Pvt Ltd</strong> — a company focused on Indic language AI and scalable institutional technology. Mission-first, not venture-hype.</p>
           <a href="https://zapurzaasystems.com" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:.5rem;text-decoration:none;margin-bottom:var(--space-6)" aria-label="Zapurzaa Systems Pvt Ltd website">
-            <img src="/images/logo-zspl.png" alt="Zapurzaa Systems" style="height:30px;width:auto">
+            <img src="/images/logo-zspl.png" alt="Zapurzaa Systems" style="height:32px;width:auto">
           </a>
 
           <h3 style="margin-bottom:var(--space-4)">What Institutions and Students Say</h3>
@@ -277,12 +420,16 @@
           <h3 style="margin-bottom:var(--space-4)">Video Testimonials</h3>
           <div class="grid grid-2">
             <div class="video-placeholder" data-youtube-id="YOUTUBE_VIDEO_ID_1" onclick="loadYoutube(this)" role="button" tabindex="0" aria-label="Play video testimonial 1" onkeypress="if(event.key==='Enter')loadYoutube(this)">
-              <div class="play-btn" aria-hidden="true">&#9654;</div>
-              <p>Video Testimonial #1<br><span style="font-size:.875rem;opacity:.7">(YouTube link to be added)</span></p>
+              <div class="play-btn" aria-hidden="true">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+              </div>
+              <p>Video Testimonial #1<br><span style="font-size:.85rem;opacity:.65">(YouTube link to be added)</span></p>
             </div>
             <div class="video-placeholder" data-youtube-id="YOUTUBE_VIDEO_ID_2" onclick="loadYoutube(this)" role="button" tabindex="0" aria-label="Play video testimonial 2" onkeypress="if(event.key==='Enter')loadYoutube(this)">
-              <div class="play-btn" aria-hidden="true">&#9654;</div>
-              <p>Video Testimonial #2<br><span style="font-size:.875rem;opacity:.7">(YouTube link to be added)</span></p>
+              <div class="play-btn" aria-hidden="true">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+              </div>
+              <p>Video Testimonial #2<br><span style="font-size:.85rem;opacity:.65">(YouTube link to be added)</span></p>
             </div>
           </div>
         </div>
@@ -328,9 +475,27 @@
           </div>
           <h3 style="margin-bottom:var(--space-3)">Core Values</h3>
           <div class="grid grid-3">
-            <div class="card"><div class="card-icon" aria-hidden="true">&#127775;</div><h4>Independence</h4><p>Every student should demonstrate their knowledge without relying on another person.</p></div>
-            <div class="card"><div class="card-icon" aria-hidden="true">&#9876;</div><h4>Dignity</h4><p>Academic assessment should never require a student to sacrifice privacy or self-expression.</p></div>
-            <div class="card"><div class="card-icon" aria-hidden="true">&#127760;</div><h4>Inclusion</h4><p>Quality education must be truly accessible — not as an exception, but as the default.</p></div>
+            <div class="card">
+              <div class="card-icon" aria-hidden="true">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              </div>
+              <h4>Independence</h4>
+              <p>Every student should demonstrate their knowledge without relying on another person.</p>
+            </div>
+            <div class="card">
+              <div class="card-icon" aria-hidden="true">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+              </div>
+              <h4>Dignity</h4>
+              <p>Academic assessment should never require a student to sacrifice privacy or self-expression.</p>
+            </div>
+            <div class="card">
+              <div class="card-icon" aria-hidden="true">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+              </div>
+              <h4>Inclusion</h4>
+              <p>Quality education must be truly accessible — not as an exception, but as the default.</p>
+            </div>
           </div>
         </div>
       </section>
@@ -345,13 +510,17 @@
           <p class="lead" style="margin-bottom:var(--space-6)">Enabelo Apps has two portals — one for institution administrators and one for students. Both are available via your institution's registered access.</p>
           <div class="grid grid-2" style="max-width:800px;margin:0 auto var(--space-6)">
             <div class="access-card">
-              <div class="ac-icon" aria-hidden="true">&#128202;</div>
+              <div class="ac-icon" aria-hidden="true">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
+              </div>
               <h3>Admin Portal</h3>
               <p>For administrators, exam coordinators, and disability support officers.</p>
               <a href="https://ea.zapurzaasystems.com" target="_blank" rel="noopener" class="btn btn-primary">Open Admin Portal &#8599;</a>
             </div>
             <div class="access-card">
-              <div class="ac-icon" aria-hidden="true">&#127891;</div>
+              <div class="ac-icon" aria-hidden="true">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
+              </div>
               <h3>Student Portal</h3>
               <p>For registered students. Complete voice-based assignments and exams independently.</p>
               <a href="https://ea.zapurzaasystems.com/student" target="_blank" rel="noopener" class="btn btn-secondary">Open Student Portal &#8599;</a>
@@ -374,23 +543,35 @@
           <p class="lead" style="margin-bottom:var(--space-6)">Every feature, workflow, and data record in Enabelo Apps is designed to support your institution's compliance and accreditation requirements.</p>
           <h3 style="margin-bottom:var(--space-3)">UN Sustainable Development Goals</h3>
           <div class="grid grid-2" style="margin-bottom:var(--space-6)">
-            <div class="sdg-badge"><div class="sdg-num sdg-4" aria-hidden="true">4</div><div><strong>SDG #4 — Quality Education</strong><p style="margin:.25rem 0 0;font-size:1rem;color:var(--color-text-muted)">Inclusive, equitable quality education for all persons, including those with disabilities.</p></div></div>
-            <div class="sdg-badge"><div class="sdg-num sdg-10" aria-hidden="true">10</div><div><strong>SDG #10 — Reduced Inequalities</strong><p style="margin:.25rem 0 0;font-size:1rem;color:var(--color-text-muted)">Promoting social inclusion regardless of disability status.</p></div></div>
+            <div class="sdg-badge"><div class="sdg-num sdg-4" aria-hidden="true">4</div><div><strong>SDG #4 — Quality Education</strong><p style="margin:.25rem 0 0;font-size:.95rem;color:var(--color-text-muted)">Inclusive, equitable quality education for all persons, including those with disabilities.</p></div></div>
+            <div class="sdg-badge"><div class="sdg-num sdg-10" aria-hidden="true">10</div><div><strong>SDG #10 — Reduced Inequalities</strong><p style="margin:.25rem 0 0;font-size:.95rem;color:var(--color-text-muted)">Promoting social inclusion regardless of disability status.</p></div></div>
           </div>
           <h3 style="margin-bottom:var(--space-3)">National Policy Alignment</h3>
           <div class="grid grid-3" style="margin-bottom:var(--space-6)">
-            <div class="card"><div class="card-icon" aria-hidden="true">&#127470;&#127475;</div><h4>RPWD Act 2016</h4><p>Enabelo Apps supports the legislative mandate for accessible education under the Rights of Persons with Disabilities Act.</p></div>
-            <div class="card"><div class="card-icon" aria-hidden="true">&#127979;</div><h4>UGC Guidelines</h4><p>University Grants Commission frameworks for equal educational opportunity and accessible campus policies.</p></div>
-            <div class="card"><div class="card-icon" aria-hidden="true">&#127941;</div><h4>NAAC Accreditation</h4><p>Audit-ready usage logs, inclusion documentation, and digital innovation evidence for NAAC evaluators.</p></div>
+            <div class="card">
+              <div class="card-icon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"/><line x1="4" y1="22" x2="4" y2="15"/></svg></div>
+              <h4>RPWD Act 2016</h4>
+              <p>Enabelo Apps supports the legislative mandate for accessible education under the Rights of Persons with Disabilities Act.</p>
+            </div>
+            <div class="card">
+              <div class="card-icon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg></div>
+              <h4>UGC Guidelines</h4>
+              <p>University Grants Commission frameworks for equal educational opportunity and accessible campus policies.</p>
+            </div>
+            <div class="card">
+              <div class="card-icon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="6"/><path d="M15.477 12.89L17 22l-5-3-5 3 1.523-9.11"/></svg></div>
+              <h4>NAAC Accreditation</h4>
+              <p>Audit-ready usage logs, inclusion documentation, and digital innovation evidence for NAAC evaluators.</p>
+            </div>
           </div>
           <div class="naac-box">
             <h4>NAAC Audit Support — What We Provide</h4>
             <p style="margin-bottom:var(--space-3)">When your institution uses Enabelo Apps, you have documented evidence for:</p>
             <ul class="feature-list">
-              <li><span class="fi-icon" aria-hidden="true">&#9989;</span><span>Accessibility inclusion practices with quantified student participation data</span></li>
-              <li><span class="fi-icon" aria-hidden="true">&#9989;</span><span>Technology-driven innovation in student support services</span></li>
-              <li><span class="fi-icon" aria-hidden="true">&#9989;</span><span>Digital transformation of traditionally manual exam accommodation processes</span></li>
-              <li><span class="fi-icon" aria-hidden="true">&#9989;</span><span>Student empowerment and welfare initiatives with measurable outcomes</span></li>
+              <li><span class="fi-icon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg></span><span>Accessibility inclusion practices with quantified student participation data</span></li>
+              <li><span class="fi-icon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg></span><span>Technology-driven innovation in student support services</span></li>
+              <li><span class="fi-icon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg></span><span>Digital transformation of traditionally manual exam accommodation processes</span></li>
+              <li><span class="fi-icon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg></span><span>Student empowerment and welfare initiatives with measurable outcomes</span></li>
             </ul>
           </div>
         </div>
@@ -444,7 +625,6 @@
     <!-- ===== PRIVACY PAGE ===== -->
     <div class="page-view" id="page-privacy">
       <div class="coming-soon-page">
-        <div class="cs-icon" aria-hidden="true">&#128274;</div>
         <h2>Privacy Policy</h2>
         <p>Our full Privacy Policy is being finalised. Please check back soon, or contact us for any data-related questions.</p>
         <a href="mailto:info@enabeloapps.com" class="btn btn-primary">Contact Us</a>
@@ -454,7 +634,6 @@
     <!-- ===== TERMS PAGE ===== -->
     <div class="page-view" id="page-terms">
       <div class="coming-soon-page">
-        <div class="cs-icon" aria-hidden="true">&#128203;</div>
         <h2>Terms of Service</h2>
         <p>Our Terms of Service are being prepared. Contact us if you have any questions.</p>
         <a href="mailto:info@enabeloapps.com" class="btn btn-primary">Contact Us</a>
@@ -468,11 +647,11 @@
     <div class="container">
       <div class="footer-grid">
         <div>
-          <img src="/images/logo-enabelo.png" alt="Enabelo Exams" style="height:38px;width:auto;filter:brightness(0) invert(1);opacity:.9;margin-bottom:var(--space-2)">
+          <img src="/images/logo-enabelo.png" alt="Enabelo Exams" style="height:52px;width:auto;filter:brightness(0) invert(1);opacity:.92;margin-bottom:var(--space-2)">
           <p class="footer-brand-desc">A pioneering accessible educational platform for Visually Impaired and Writing-Disabled Students. Built in India by Zapurzaa Systems Pvt Ltd.</p>
           <div class="social-links" aria-label="Social media links">
             <a href="#" aria-label="LinkedIn">in</a>
-            <a href="#" aria-label="Twitter">&#120143;</a>
+            <a href="#" aria-label="Twitter">X</a>
             <a href="#" aria-label="YouTube">&#9654;</a>
           </div>
         </div>
@@ -503,16 +682,21 @@
           </ul>
         </div>
       </div>
-      <hr class="footer-divider">
-      <div class="footer-bottom">
-        <span>&copy; 2026&ndash;2030 Zapurzaa Systems Pvt Ltd. All rights reserved.</span>
-        <a href="https://zapurzaasystems.com" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:.5rem;text-decoration:none">
-          <img src="/images/logo-zspl.png" alt="Zapurzaa Systems" style="height:20px;width:auto;opacity:.8">
-        </a>
-        <span>&#127470;&#127475; Made with purpose in India</span>
-      </div>
     </div>
   </footer>
+
+  <!-- COPYRIGHT BAND — white background -->
+  <div class="footer-copyright">
+    <div class="container">
+      <div class="footer-bottom">
+        <span>&copy; 2026&ndash;2030 Zapurzaa Systems Pvt Ltd. All rights reserved.</span>
+        <a href="https://zapurzaasystems.com" target="_blank" rel="noopener" aria-label="Zapurzaa Systems Pvt Ltd">
+          <img src="/images/logo-zspl.png" alt="Zapurzaa Systems" style="height:28px;width:auto;vertical-align:middle">
+        </a>
+        <span>Made with purpose in India</span>
+      </div>
+    </div>
+  </div>
 
   <script src="/js/main.js"></script>
 </body>
