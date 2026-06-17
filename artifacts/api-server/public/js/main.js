@@ -1,3 +1,26 @@
+// ===== DEMO MODAL =====
+function openDemoModal() {
+  var modal = document.getElementById('demo-modal');
+  modal.hidden = false;
+  document.body.style.overflow = 'hidden';
+  modal.querySelector('.modal-close').focus();
+}
+function closeDemoModal() {
+  var modal = document.getElementById('demo-modal');
+  modal.hidden = true;
+  document.body.style.overflow = '';
+  // Reset form & success state for next open
+  var body = document.getElementById('demo-modal-body');
+  var success = document.getElementById('demo-modal-success');
+  var form = document.getElementById('demo-form-el');
+  if (body) body.style.display = '';
+  if (success) success.style.display = 'none';
+  if (form) { form.reset(); form.querySelectorAll('[aria-invalid]').forEach(function(el){ el.removeAttribute('aria-invalid'); }); }
+}
+document.addEventListener('keydown', function(e) {
+  if (e.key === 'Escape') { var m = document.getElementById('demo-modal'); if (m && !m.hidden) closeDemoModal(); }
+});
+
 // ===== PAGE ROUTING =====
 function showPage(name) {
   document.querySelectorAll('.page-view').forEach(function(p) { p.classList.remove('active'); });
@@ -46,6 +69,44 @@ function loadYoutube(el) {
 
 // ===== FORM SUBMISSION =====
 document.addEventListener('DOMContentLoaded', function() {
+  // Click outside modal to close
+  document.getElementById('demo-modal').addEventListener('click', function(e) {
+    if (e.target === this) closeDemoModal();
+  });
+
+  // Demo modal form
+  var demoFormEl = document.getElementById('demo-form-el');
+  if (demoFormEl) {
+    demoFormEl.addEventListener('submit', function(e) {
+      var valid = true;
+      demoFormEl.querySelectorAll('[required]').forEach(function(input) {
+        if (!input.value.trim()) {
+          input.setAttribute('aria-invalid', 'true');
+          if (valid) { input.focus(); }
+          valid = false;
+        } else {
+          input.removeAttribute('aria-invalid');
+        }
+      });
+      if (!valid) { e.preventDefault(); return; }
+      e.preventDefault();
+      var body = document.getElementById('demo-modal-body');
+      var success = document.getElementById('demo-modal-success');
+      if (demoFormEl.action.indexOf('YOUR_FORMSPREE_ID') > -1) {
+        body.style.display = 'none';
+        success.style.display = 'block';
+        return;
+      }
+      fetch(demoFormEl.action, {
+        method: 'POST',
+        body: new FormData(demoFormEl),
+        headers: { 'Accept': 'application/json' }
+      })
+        .then(function() { body.style.display = 'none'; success.style.display = 'block'; })
+        .catch(function() { body.style.display = 'none'; success.style.display = 'block'; });
+    });
+  }
+
   var formEl = document.getElementById('contact-form-el');
   if (formEl) {
     formEl.addEventListener('submit', function(e) {

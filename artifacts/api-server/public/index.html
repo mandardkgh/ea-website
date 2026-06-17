@@ -34,7 +34,7 @@
         <li><a href="#" onclick="showPage('contact');closeNav();">Contact</a></li>
       </ul>
       <div class="nav-cta">
-        <a href="#" class="btn btn-primary" onclick="showPage('contact');closeNav();" style="font-size:.9rem;padding:.65rem 1.25rem;min-width:0;">Book a Demo</a>
+        <button class="btn btn-primary" onclick="openDemoModal();closeNav();" style="font-size:.9rem;padding:.65rem 1.25rem;min-width:0;">Book a Demo</button>
       </div>
     </nav>
   </header>
@@ -51,7 +51,7 @@
             <h1 id="hero-heading">Independence.<br><span>Dignity.</span><br>Education.</h1>
             <p class="hero-sub">Enabelo Apps is a software platform that empowers visually impaired and writing&#8209;disabled students to complete academic work and take exams independently using AI-powered voice technology.</p>
             <div class="btn-group">
-              <a href="https://calendly.com/mandar-zapurzaasystems" target="_blank" rel="noopener" class="btn btn-primary">Book a Demo</a>
+              <button class="btn btn-primary" onclick="openDemoModal()">Book a Demo</button>
               <a href="#" class="btn btn-secondary" onclick="showPage('contact');">Request Institutional Pilot</a>
             </div>
           </div>
@@ -326,7 +326,7 @@
               </div>
             </div>
             <div style="margin-top:var(--space-3)">
-              <a href="https://calendly.com/mandar-zapurzaasystems" target="_blank" rel="noopener" class="btn btn-primary">Schedule a Demo for Your Institution</a>
+              <button class="btn btn-primary" onclick="openDemoModal()">Schedule a Demo for Your Institution</button>
             </div>
           </div>
         </div>
@@ -475,7 +475,7 @@
           <h2 id="cta-heading">Let's Build an Inclusive Campus Together</h2>
           <p>Whether you are a trustee, administrator, disability officer, or policy maker — Enabelo Apps is ready to transform how your institution serves every student.</p>
           <div class="btn-group" style="justify-content:center">
-            <a href="https://calendly.com/mandar-zapurzaasystems" target="_blank" rel="noopener" class="btn btn-white">Book a Demo</a>
+            <button class="btn btn-white" onclick="openDemoModal()">Book a Demo</button>
             <a href="#" class="btn btn-outline-white" onclick="showPage('contact')">Request Institutional Pilot</a>
             <a href="#" class="btn btn-outline-white" onclick="showPage('contact')">Contact Us</a>
           </div>
@@ -712,7 +712,7 @@
       <h2 id="cta-band-heading">Ready to bring Enabelo Apps to your institution?</h2>
       <p>Join the growing movement for inclusive education in India. Book a demo or request a pilot — no commitment required.</p>
       <div class="btn-group">
-        <a href="https://calendly.com/mandar-zapurzaasystems" target="_blank" rel="noopener" class="btn btn-primary">Book a Demo</a>
+        <button class="btn btn-primary" onclick="openDemoModal()">Book a Demo</button>
         <a href="#" class="btn btn-white" onclick="showPage('contact');window.scrollTo(0,0);">Request Institutional Pilot</a>
       </div>
     </div>
@@ -750,7 +750,7 @@
         <div>
           <h5>Contact</h5>
           <ul class="footer-links">
-            <li><a href="#" onclick="showPage('contact')">Book a Demo</a></li>
+            <li><a href="#" onclick="openDemoModal();return false;">Book a Demo</a></li>
             <li><a href="#" onclick="showPage('contact')">Request a Pilot</a></li>
             <li><a href="mailto:info@enabeloapps.com">info@enabeloapps.com</a></li>
             <li><a href="#" onclick="showPage('privacy')">Privacy Policy</a></li>
@@ -775,5 +775,52 @@
   </div>
 
   <script src="/js/main.js"></script>
+
+  <!-- ===== DEMO MODAL ===== -->
+  <div id="demo-modal" class="modal-overlay" role="dialog" aria-modal="true" aria-labelledby="demo-modal-title" hidden>
+    <div class="modal-dialog">
+      <button class="modal-close" onclick="closeDemoModal()" aria-label="Close dialog">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+      </button>
+      <div id="demo-modal-body">
+        <h2 id="demo-modal-title">Book a Demo</h2>
+        <p class="modal-subtitle">Tell us about your institution and we will arrange a personalised demonstration within one business day.</p>
+        <form id="demo-form-el" action="https://formspree.io/f/YOUR_FORMSPREE_ID" method="POST" novalidate aria-label="Demo request form">
+          <input type="hidden" name="_subject" value="Enabelo Apps &#8212; Demo Request">
+          <div class="form-group">
+            <label class="form-label" for="dm-name">Full Name <span class="req" aria-label="required">*</span></label>
+            <input class="form-input" type="text" id="dm-name" name="name" required autocomplete="name" placeholder="Your full name">
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="dm-institution">Institution / Organisation <span class="req" aria-label="required">*</span></label>
+            <input class="form-input" type="text" id="dm-institution" name="institution" required placeholder="Name of your school, college or organisation">
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="dm-role">Your Role <span class="req" aria-label="required">*</span></label>
+            <input class="form-input" type="text" id="dm-role" name="role" required placeholder="e.g. Principal, Trustee, Disability Support Officer">
+          </div>
+          <div class="form-two-col">
+            <div class="form-group">
+              <label class="form-label" for="dm-email">Email Address <span class="req" aria-label="required">*</span></label>
+              <input class="form-input" type="email" id="dm-email" name="email" required autocomplete="email" placeholder="your@institution.edu">
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="dm-phone">Phone Number</label>
+              <input class="form-input" type="tel" id="dm-phone" name="phone" autocomplete="tel" placeholder="+91 XXXXX XXXXX">
+            </div>
+          </div>
+          <button type="submit" class="btn btn-primary" style="width:100%;justify-content:center;margin-top:.5rem">Request a Demo &#8594;</button>
+        </form>
+      </div>
+      <div id="demo-modal-success" style="display:none" role="alert">
+        <div class="modal-success-icon" aria-hidden="true">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+        </div>
+        <h3>Request Received</h3>
+        <p>Thank you! Our team will reach out within one business day to schedule your personalised demo.</p>
+        <button class="btn btn-primary" onclick="closeDemoModal()" style="margin-top:1.5rem">Close</button>
+      </div>
+    </div>
+  </div>
 </body>
 </html>
