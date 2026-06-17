@@ -65,7 +65,7 @@ Enabelo Apps is a software platform that empowers visually impaired and writing�
 ## Placeholders still to fill
 
 - ~~Calendly link~~ — filled in: `https://calendly.com/mandar-zapurzaasystems`
-- `YOUR_FORMSPREE_ID` — Formspree form ID for the contact form
+- ~~Formspree ID~~ — filled in: `xlgkkaqa` (endpoint: `https://formspree.io/f/xlgkkaqa`)
 - `YOUTUBE_VIDEO_ID_1`, `YOUTUBE_VIDEO_ID_2` — demo video embeds
 - Testimonial text — currently placeholder copy
 
