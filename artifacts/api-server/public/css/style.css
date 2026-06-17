@@ -330,6 +330,12 @@ h4 { font-size: 1.1rem; font-weight: 700; }
   border-radius: var(--radius-lg); overflow: hidden;
   box-shadow: var(--shadow-sm);
 }
+.compliance-table-wrap > h3,
+.compliance-table-wrap > p {
+  padding: 0 var(--space-4);
+}
+.compliance-table-wrap > h3 { padding-top: var(--space-4); }
+.compliance-table-wrap > p { padding-bottom: var(--space-3); }
 .compliance-table {
   width: 100%; border-collapse: collapse; font-size: 0.95rem;
 }
