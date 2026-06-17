@@ -324,6 +324,39 @@ h4 { font-size: 1.1rem; font-weight: 700; }
 .sdg-4 { background: #C5192D; }
 .sdg-10 { background: #DD1367; }
 
+/* ===== COMPLIANCE TABLE ===== */
+.compliance-table-wrap {
+  border: 1.5px solid var(--color-border);
+  border-radius: var(--radius-lg); overflow: hidden;
+  box-shadow: var(--shadow-sm);
+}
+.compliance-table {
+  width: 100%; border-collapse: collapse; font-size: 0.95rem;
+}
+.compliance-table thead tr { background: var(--color-brand-deeper); color: #fff; }
+.compliance-table th {
+  padding: var(--space-3) var(--space-4); text-align: left;
+  font-weight: 700; font-size: 0.9rem; letter-spacing: 0.02em;
+}
+.compliance-table th:first-child { width: 42%; }
+.compliance-table td {
+  padding: var(--space-3) var(--space-4); vertical-align: top;
+  border-bottom: 1px solid var(--color-border); line-height: 1.6;
+}
+.compliance-table tbody tr:last-child td { border-bottom: none; }
+.compliance-table tbody tr:nth-child(even) { background: var(--color-bg-alt); }
+.compliance-table tbody tr td:first-child {
+  font-weight: 600; color: var(--color-text);
+  border-right: 1px solid var(--color-border);
+}
+.compliance-table tbody tr td:last-child { color: var(--color-text-muted); }
+@media (max-width: 700px) {
+  .compliance-table thead { display: none; }
+  .compliance-table tbody tr { display: block; border-bottom: 2px solid var(--color-border); }
+  .compliance-table tbody tr td { display: block; border: none; padding: var(--space-1) var(--space-3); }
+  .compliance-table tbody tr td:first-child { color: var(--color-brand-deeper); font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.04em; }
+}
+
 /* ===== CTA BAND ===== */
 .cta-band {
   background: var(--color-brand-deeper); padding: var(--space-12) 0;
