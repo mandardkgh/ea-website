@@ -139,14 +139,15 @@ h4 { font-size: 1.1rem; font-weight: 700; }
 .card:hover { box-shadow: var(--shadow-lg); transform: translateY(-4px); }
 .problem-grid .card { border-left: 4px solid #D97706; }
 .card-icon {
-  width: 48px; height: 48px;
-  background: rgba(0,119,168,0.09);
-  border-radius: var(--radius-md);
+  width: 68px; height: 68px;
+  background: linear-gradient(135deg, rgba(0,119,168,0.12) 0%, rgba(0,61,87,0.08) 100%);
+  border: 1.5px solid rgba(0,119,168,0.2);
+  border-radius: 50%;
   display: flex; align-items: center; justify-content: center;
   margin-bottom: var(--space-2);
   color: var(--color-brand-dark);
 }
-.card-icon svg { width: 24px; height: 24px; }
+.card-icon svg { width: 30px; height: 30px; }
 
 /* ===== TRUST STRIP ===== */
 .trust-strip {
@@ -161,13 +162,13 @@ h4 { font-size: 1.1rem; font-weight: 700; }
   flex: 1; min-width: 200px;
 }
 .trust-icon-wrap {
-  width: 52px; height: 52px; flex-shrink: 0;
+  width: 68px; height: 68px; flex-shrink: 0;
   background: rgba(255,255,255,0.18);
-  border-radius: var(--radius-md);
+  border-radius: 50%;
   display: flex; align-items: center; justify-content: center;
   color: #fff;
 }
-.trust-icon-wrap svg { width: 26px; height: 26px; }
+.trust-icon-wrap svg { width: 30px; height: 30px; }
 .trust-text { display: flex; flex-direction: column; gap: 0.15rem; }
 .trust-text strong { font-size: 1rem; font-weight: 800; color: #fff; line-height: 1.2; }
 .trust-text span { font-size: 0.8rem; font-weight: 500; color: rgba(255,255,255,0.75); }
