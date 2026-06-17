@@ -64,7 +64,7 @@ Enabelo Apps is a software platform that empowers visually impaired and writing�
 
 ## Placeholders still to fill
 
-- `YOUR_CALENDLY_LINK_HERE` — Calendly booking URL (in header CTA, hero, and CTA band)
+- ~~Calendly link~~ — filled in: `https://calendly.com/mandar-zapurzaasystems`
 - `YOUR_FORMSPREE_ID` — Formspree form ID for the contact form
 - `YOUTUBE_VIDEO_ID_1`, `YOUTUBE_VIDEO_ID_2` — demo video embeds
 - Testimonial text — currently placeholder copy
