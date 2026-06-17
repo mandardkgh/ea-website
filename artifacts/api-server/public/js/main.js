@@ -102,8 +102,22 @@ document.addEventListener('DOMContentLoaded', function() {
         body: new FormData(demoFormEl),
         headers: { 'Accept': 'application/json' }
       })
-        .then(function() { body.style.display = 'none'; success.style.display = 'block'; })
-        .catch(function() { body.style.display = 'none'; success.style.display = 'block'; });
+        .then(function(res) {
+          if (res.ok) {
+            body.style.display = 'none'; success.style.display = 'block';
+          } else {
+            res.json().then(function(data) {
+              console.error('Formspree error:', data);
+              alert('Submission failed (' + (data.error || res.status) + '). Please try again or email us directly.');
+            }).catch(function() {
+              alert('Submission failed (status ' + res.status + '). Please try again.');
+            });
+          }
+        })
+        .catch(function(err) {
+          console.error('Network error:', err);
+          alert('Could not reach the server. Please check your connection and try again.');
+        });
     });
   }
 
@@ -135,13 +149,22 @@ document.addEventListener('DOMContentLoaded', function() {
         body: new FormData(formEl),
         headers: { 'Accept': 'application/json' }
       })
-        .then(function() {
-          document.getElementById('form-success').style.display = 'block';
-          formEl.style.display = 'none';
+        .then(function(res) {
+          if (res.ok) {
+            document.getElementById('form-success').style.display = 'block';
+            formEl.style.display = 'none';
+          } else {
+            res.json().then(function(data) {
+              console.error('Formspree error:', data);
+              alert('Submission failed (' + (data.error || res.status) + '). Please try again or email us directly.');
+            }).catch(function() {
+              alert('Submission failed (status ' + res.status + '). Please try again.');
+            });
+          }
         })
-        .catch(function() {
-          document.getElementById('form-success').style.display = 'block';
-          formEl.style.display = 'none';
+        .catch(function(err) {
+          console.error('Network error:', err);
+          alert('Could not reach the server. Please check your connection and try again.');
         });
     });
   }
