@@ -49,7 +49,7 @@ Enabelo Apps is a software platform that empowers visually impaired and writing�
 
 **Target audience:** Trustees, university administrators, NAAC teams, NGOs.
 
-**Primary CTAs:** Book a Demo (Calendly), Request Institutional Pilot (Formspree contact form).
+**Primary CTA:** Book a Demo — opens a modal form (Name, Institution, Role, Email, Phone). Demo leads naturally into pilot discussions over personal follow-up. No separate "Request Pilot" button anywhere on the site.
 
 **Pages:** Home · About · Impact & Compliance · Contact
 
