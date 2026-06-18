@@ -14,6 +14,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/css/style.css">
+  <link rel="icon" type="image/svg+xml" href="/images/favicon.svg">
 </head>
 <body>
   <a href="#main-content" class="skip-link">Skip to main content</a>
@@ -651,7 +652,10 @@
           <p class="lead" style="margin-bottom:var(--space-6);max-width:52ch">Ready to explore Enabelo Apps for your institution? Fill in the form below and our team will respond within 1 business day.</p>
           <div id="contact-form" style="scroll-margin-top:80px">
             <div class="form-wrap">
-              <div class="form-success" id="form-success" role="alert">&#10004; Thank you! Your message has been received. We will be in touch within 1 business day.</div>
+              <div class="form-success" id="form-success" role="alert">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" width="18" height="18" aria-hidden="true" style="vertical-align:middle;margin-right:.4em"><path d="M17 5 8 14l-5-5"/></svg>
+                Thank you! Your message has been received. We will be in touch within 1 business day.
+              </div>
               <form action="https://formspree.io/f/xlgkkaqa" method="POST" id="contact-form-el" novalidate aria-label="Contact and demo request form">
                 <input type="hidden" name="_subject" value="Enabelo Apps — Demo/Contact Request">
                 <div class="form-group">
@@ -814,7 +818,12 @@
         </div>
         <h3>Request Received</h3>
         <p>Thank you! Our team will reach out within one business day to schedule your personalised demo.</p>
-        <button class="btn btn-primary" onclick="closeDemoModal()" style="margin-top:1.5rem">Close</button>
+        <p style="margin-top:1rem;font-size:.92rem;color:var(--text-muted)">Prefer to pick a time yourself? Book directly on our calendar.</p>
+        <a href="https://calendly.com/mandar-zapurzaasystems" target="_blank" rel="noopener" class="btn btn-primary" style="margin-top:.75rem;display:inline-flex;align-items:center;gap:.5rem">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="16" height="16" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+          Schedule on Calendly
+        </a>
+        <button class="btn" onclick="closeDemoModal()" style="margin-top:.75rem;margin-left:.5rem;background:transparent;color:var(--text-muted);border:1px solid var(--border)">Close</button>
       </div>
     </div>
   </div>

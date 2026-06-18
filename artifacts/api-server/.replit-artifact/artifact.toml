@@ -21,7 +21,7 @@ args = ["pnpm", "--filter", "@workspace/api-server", "run", "build"]
 NODE_ENV = "production"
 
 [services.production.run]
-# we don't run through pnpm to make startup faster in production
+# run directly via node for faster cold starts in production
 args = ["node", "--enable-source-maps", "artifacts/api-server/dist/index.mjs"]
 
 [services.production.run.env]
@@ -30,3 +30,5 @@ NODE_ENV = "production"
 
 [services.production.health.startup]
 path = "/api/healthz"
+initialDelaySeconds = 5
+timeoutSeconds = 10
