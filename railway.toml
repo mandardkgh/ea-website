@@ -1,0 +1,8 @@
+[build]
+builder = "NIXPACKS"
+buildCommand = "pnpm install --no-frozen-lockfile && pnpm --filter @workspace/website run build"
+
+[deploy]
+startCommand = "npx serve -s artifacts/website/dist/public -p $PORT"
+healthcheckPath = "/"
+healthcheckTimeout = 30
