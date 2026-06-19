@@ -4,15 +4,17 @@ A multi-page institutional landing website for enabeloapps.com — an accessible
 
 ## Run & Operate
 
-- `pnpm --filter @workspace/api-server run dev` — run the Express server (serves the static site)
-- Workflow name: `artifacts/api-server: API Server` — start/restart via Replit workflows panel
-- No database, no API codegen, no build step required for the static site
+- `pnpm --filter @workspace/website run dev` — run the Vite dev server for the website (port 19161)
+- `pnpm --filter @workspace/api-server run dev` — run the Express API server (serves `/api` only)
+- Workflow names in Replit: `artifacts/website: web` and `artifacts/api-server: API Server`
+- No database, no API codegen required
 
 ## Stack
 
 - pnpm workspaces, Node.js 24, TypeScript 5.9
-- Server: Express 5 (`artifacts/api-server/src/app.ts`) — serves static files only
-- Static site: plain HTML + CSS + vanilla JS (no framework)
+- **Website:** `artifacts/website` — Vite-served static site (`kind=web`, `previewPath=/`)
+- **API server:** `artifacts/api-server` — Express 5, serves `/api` only (no static files)
+- Static site: plain HTML + CSS + vanilla JS (no React framework in site content)
 - Fonts: Inter (400/600/700/800/900) from Google Fonts
 - Icons: inline SVGs throughout — no icon library dependency
 - No database, no ORM, no API spec
@@ -20,28 +22,53 @@ A multi-page institutional landing website for enabeloapps.com — an accessible
 ## Where things live
 
 ```
-artifacts/api-server/
-├── src/app.ts                  — Express server, serves public/ at root
+artifacts/website/
+├── index.html                  — All pages (SPA via JS routing, showPage())
 ├── public/
-│   ├── index.html              — All pages (SPA via JS routing, showPage())
 │   ├── css/style.css           — All styles, CSS custom properties
 │   ├── js/main.js              — Page routing, nav toggle, form handling
 │   └── images/
 │       ├── logo-enabelo.png    — Enabelo Apps logo (120px in header & footer)
 │       ├── logo-zspl.png       — Zapurzaa Systems logo (footer copyright band)
 │       ├── computer-lab.png    — Hero section image
-│       └── vi-girl.jpg         — "Why Unique" section image
+│       ├── vi-girl.jpg         — "Why Unique" section image
+│       └── favicon.svg         — Browser tab icon
+├── vite.config.ts              — Vite config (PORT + BASE_PATH from env)
 └── .replit-artifact/
-    └── artifact.toml           — paths=["/api","/"], previewPath="/"
+    └── artifact.toml           — kind=web, paths=["/"], previewPath="/"
+
+artifacts/api-server/
+├── src/app.ts                  — Express server, /api routes only
+├── public/                     — Source copy of HTML/CSS/JS (kept in sync manually)
+└── .replit-artifact/
+    └── artifact.toml           — kind=api, paths=["/api"]
+
+railway.toml                    — Railway deployment config (repo root)
 ```
+
+## Deployment
+
+### Replit (development preview)
+The `artifacts/website: web` workflow serves the site at `/` via Vite dev server.
+Click **Publish** in Replit to deploy to a `.replit.app` domain or custom domain.
+
+### Railway (production / custom domain)
+`railway.toml` at the repo root configures Railway automatically on every deploy:
+- **Install:** `pnpm install --no-frozen-lockfile` — bypasses pnpm lockfile mismatch caused by Replit-specific platform overrides in `pnpm-workspace.yaml`
+- **Build:** `pnpm --filter @workspace/website run build` — Vite static build → `artifacts/website/dist/public/`
+- **Serve:** `npx serve -s artifacts/website/dist/public -p $PORT`
+- **No API server needed** — the site is fully static; forms go to Formspree, demo booking to Calendly
+
+Connect Railway to `https://github.com/mandardkgh/ea-website` (main branch). Railway picks up `railway.toml` automatically — no Railway dashboard build settings needed.
 
 ## Architecture decisions
 
-- **Single HTML file, JS-routed SPA** — all pages (Home, About, Impact & Compliance, Contact) live in `index.html` as `<div class="page-view">` blocks; `showPage()` in `main.js` toggles visibility. Keeps deployment simple — no build pipeline for the marketing site.
+- **Single HTML file, JS-routed SPA** — all pages (Home, About, Impact & Compliance, Contact, Platform Access, Privacy, Terms) live in `index.html` as `<div class="page-view">` blocks; `showPage()` in `main.js` toggles visibility.
+- **kind=web artifact** — `artifacts/website` is registered as `kind=web` so the Replit Publish button is enabled.
 - **No emoji anywhere** — all iconography uses inline SVGs for professionalism and accessibility.
 - **Non-breaking hyphen for "writing‑disabled"** — uses `&#8209;` throughout to prevent the word splitting across lines.
 - **Company name standard** — always "Zapurzaa Systems Pvt. Ltd." with full-stops after both Pvt and Ltd.
-- **Static files only** — Express is used purely as a static file server. No API routes are needed for the landing site.
+- **Static files only** — no API routes needed for the landing site.
 
 ## Product
 
@@ -51,7 +78,7 @@ Enabelo Apps is a software platform that empowers visually impaired and writing�
 
 **Primary CTA:** Book a Demo — opens a modal form (Name, Institution, Role, Email, Phone). Demo leads naturally into pilot discussions over personal follow-up. No separate "Request Pilot" button anywhere on the site.
 
-**Pages:** Home · About · Impact & Compliance · Contact
+**Pages:** Home · About · Impact & Compliance · Contact · Platform Access · Privacy · Terms
 
 ## Design system
 
@@ -84,3 +111,5 @@ Enabelo Apps is a software platform that empowers visually impaired and writing�
 - **Verify `writing&#8209;disabled` encoding** — after any bulk find-replace, grep for `writingwriting` to catch double-replacement bugs.
 - The logo file at `public/images/logo-enabelo.png` is the correct current logo (teal Enabelo Apps script). The footer version uses `filter:brightness(0) invert(1)` for the white-on-dark display.
 - The compliance table on the Impact & Compliance page wraps heading + paragraph + `<table>` inside `.compliance-table-wrap` — padding for the text is applied via CSS child selectors (`> h3`, `> p`), not inline styles.
+- **Railway lockfile mismatch** — solved permanently by `railway.toml` using `--no-frozen-lockfile`. Root cause: `pnpm-workspace.yaml` has Replit-specific platform overrides (`"-"` syntax) that Railway's pnpm doesn't read from workspace config. Never remove `railway.toml` or change it to `--frozen-lockfile`.
+- **Two copies of static files** — `artifacts/website/public/` is the live source; `artifacts/api-server/public/` is a legacy copy. If you edit HTML/CSS/JS, edit `artifacts/website/` only.
