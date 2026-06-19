@@ -1,6 +1,9 @@
 [build]
 builder = "NIXPACKS"
-buildCommand = "pnpm install --no-frozen-lockfile && pnpm --filter @workspace/website run build"
+buildCommand = "pnpm --filter @workspace/website run build"
+
+[build.nixpacksPlan.variables]
+NIXPACKS_INSTALL_CMD = "pnpm install --no-frozen-lockfile"
 
 [deploy]
 startCommand = "npx serve -s artifacts/website/dist/public -p $PORT"
