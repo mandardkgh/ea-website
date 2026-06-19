@@ -33,17 +33,18 @@ artifacts/website/
 │       ├── computer-lab.png    — Hero section image
 │       ├── vi-girl.jpg         — "Why Unique" section image
 │       └── favicon.svg         — Browser tab icon
-├── vite.config.ts              — Vite config (PORT + BASE_PATH from env)
+├── vite.config.ts              — Vite config; PORT + BASE_PATH optional (default: 3000, "/")
 └── .replit-artifact/
     └── artifact.toml           — kind=web, paths=["/"], previewPath="/"
 
 artifacts/api-server/
 ├── src/app.ts                  — Express server, /api routes only
-├── public/                     — Source copy of HTML/CSS/JS (kept in sync manually)
+├── public/                     — Legacy copy of HTML/CSS/JS (do not edit here)
 └── .replit-artifact/
     └── artifact.toml           — kind=api, paths=["/api"]
 
-railway.toml                    — Railway deployment config (repo root)
+railway.toml                    — Railway build + serve config (repo root)
+nixpacks.toml                   — Nixpacks overrides: Node 20, custom install cmd (repo root)
 ```
 
 ## Deployment
@@ -53,13 +54,36 @@ The `artifacts/website: web` workflow serves the site at `/` via Vite dev server
 Click **Publish** in Replit to deploy to a `.replit.app` domain or custom domain.
 
 ### Railway (production / custom domain)
-`railway.toml` at the repo root configures Railway automatically on every deploy:
-- **Install:** `pnpm install --no-frozen-lockfile` — bypasses pnpm lockfile mismatch caused by Replit-specific platform overrides in `pnpm-workspace.yaml`
-- **Build:** `pnpm --filter @workspace/website run build` — Vite static build → `artifacts/website/dist/public/`
-- **Serve:** `npx serve -s artifacts/website/dist/public -p $PORT`
-- **No API server needed** — the site is fully static; forms go to Formspree, demo booking to Calendly
+Three files at the repo root work together on every Railway deploy:
 
-Connect Railway to `https://github.com/mandardkgh/ea-website` (main branch). Railway picks up `railway.toml` automatically — no Railway dashboard build settings needed.
+**`railway.toml`**
+```toml
+[build]
+builder = "NIXPACKS"
+buildCommand = "pnpm --filter @workspace/website run build"
+
+[deploy]
+startCommand = "npx serve -s artifacts/website/dist/public -p $PORT"
+healthcheckPath = "/"
+healthcheckTimeout = 30
+```
+
+**`nixpacks.toml`**
+```toml
+[variables]
+NODE_VERSION = "20"
+
+[phases.install]
+cmds = ["pnpm install --no-frozen-lockfile"]
+```
+
+- `NODE_VERSION = "20"` — Vite 7 requires Node ≥ 20.19; Nixpacks auto-detects 18 without this.
+- `phases.install` — overrides Nixpacks' default `pnpm i --frozen-lockfile` pre-step, which fails because `pnpm-workspace.yaml` has Replit-specific platform overrides that Railway's pnpm does not understand.
+- `buildCommand` in `railway.toml` runs only the Vite build; install is handled by Nixpacks via `nixpacks.toml`.
+
+**`vite.config.ts`** — PORT and BASE_PATH are optional with safe defaults (`3000` and `"/"`) so Vite does not throw during Railway's build phase (when `PORT` is not set).
+
+Connect Railway to `https://github.com/mandardkgh/ea-website` (main branch). Railway picks up both `.toml` files automatically — no Railway dashboard settings needed.
 
 ## Architecture decisions
 
@@ -111,5 +135,7 @@ Enabelo Apps is a software platform that empowers visually impaired and writing�
 - **Verify `writing&#8209;disabled` encoding** — after any bulk find-replace, grep for `writingwriting` to catch double-replacement bugs.
 - The logo file at `public/images/logo-enabelo.png` is the correct current logo (teal Enabelo Apps script). The footer version uses `filter:brightness(0) invert(1)` for the white-on-dark display.
 - The compliance table on the Impact & Compliance page wraps heading + paragraph + `<table>` inside `.compliance-table-wrap` — padding for the text is applied via CSS child selectors (`> h3`, `> p`), not inline styles.
-- **Railway lockfile mismatch** — solved permanently by `railway.toml` using `--no-frozen-lockfile`. Root cause: `pnpm-workspace.yaml` has Replit-specific platform overrides (`"-"` syntax) that Railway's pnpm doesn't read from workspace config. Never remove `railway.toml` or change it to `--frozen-lockfile`.
+- **Railway lockfile mismatch** — fixed via `nixpacks.toml` overriding the install phase with `pnpm install --no-frozen-lockfile`. Root cause: `pnpm-workspace.yaml` has Replit-specific platform overrides (`"-"` syntax) that Railway's pnpm ignores, causing a lockfile hash mismatch. Never remove `nixpacks.toml` or revert its install command.
+- **Railway Node version** — Nixpacks auto-detects Node 18 but Vite 7 requires ≥ 20.19. Pinned via `NODE_VERSION = "20"` in `nixpacks.toml`. Do not remove this.
+- **Vite build requires no PORT/BASE_PATH** — `vite.config.ts` uses safe defaults (`3000` / `"/"`) when env vars are absent. Do not add back hard throws for these vars — the Railway build phase has no PORT set.
 - **Two copies of static files** — `artifacts/website/public/` is the live source; `artifacts/api-server/public/` is a legacy copy. If you edit HTML/CSS/JS, edit `artifacts/website/` only.
