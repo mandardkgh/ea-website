@@ -1,3 +1,6 @@
+// ===== BUILD INFO =====
+console.log('[Enabelo Apps] Built: ' + __BUILD_DATE__ + ' | Commit: ' + __GIT_COMMIT__);
+
 // ===== DEMO MODAL =====
 function openDemoModal() {
   var modal = document.getElementById('demo-modal');
