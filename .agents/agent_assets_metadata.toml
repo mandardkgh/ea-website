@@ -6,3 +6,9 @@ id = "vQ5RVIfe1R_1Lvipr0b0b"
 uri = "file://enabeloapps_website.tar.gz"
 type = "unspecified"
 title = "Enabelo Apps Website — enabeloapps.html (317 KB compressed)"
+
+[[outputs]]
+id = "bW2z2u71SyFwmduclbqzo"
+uri = "file://enabelo-apps-ea.zip"
+type = "unspecified"
+title = "enabelo-apps-ea.zip — Upload contents to /ea/ on IONOS"
