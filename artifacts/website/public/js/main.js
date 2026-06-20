@@ -63,7 +63,7 @@ function loadYoutube(el) {
   iframe.frameBorder = '0';
   iframe.allow = 'autoplay; encrypted-media; picture-in-picture';
   iframe.allowFullscreen = true;
-  iframe.title = 'Video Testimonial';
+  iframe.title = el.getAttribute('data-title') || 'Video';
   iframe.style.cssText = 'position:absolute;top:0;left:0;width:100%;height:100%;border-radius:inherit;';
   el.style.position = 'relative';
   el.innerHTML = '';
