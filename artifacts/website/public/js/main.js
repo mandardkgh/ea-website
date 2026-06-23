@@ -111,7 +111,7 @@ function loadYoutube(el) {
     return;
   }
   var iframe = document.createElement('iframe');
-  iframe.src = 'https://www.youtube.com/embed/' + id + '?autoplay=1';
+  iframe.src = 'https://www.youtube.com/embed/' + id + '?autoplay=1&cc_load_policy=0';
   iframe.frameBorder = '0';
   iframe.allow = 'autoplay; encrypted-media; picture-in-picture';
   iframe.allowFullscreen = true;
