@@ -1,6 +1,56 @@
 // ===== BUILD INFO =====
 console.log('[Enabelo Apps] Built: ' + __BUILD_DATE__ + ' | Commit: ' + __GIT_COMMIT__);
 
+// ===== CONTENT CONFIG =====
+function loadContent() {
+  fetch('./content.json?v=' + Date.now())
+    .then(function(res) { return res.json(); })
+    .then(function(cfg) {
+      // Explainer video
+      var ev = document.getElementById('explainer-video');
+      if (ev && cfg.explainerVideo) {
+        ev.setAttribute('data-youtube-id', cfg.explainerVideo.youtubeId);
+        if (cfg.explainerVideo.title) {
+          ev.setAttribute('data-title', cfg.explainerVideo.title);
+          ev.setAttribute('aria-label', 'Play ' + cfg.explainerVideo.title);
+        }
+      }
+      // Text testimonials
+      var tt = cfg.textTestimonials;
+      if (tt) {
+        [1, 2].forEach(function(n) {
+          var card = document.getElementById('text-testimonial-' + n);
+          var t = tt[n - 1];
+          if (!card || !t) return;
+          var textEl = card.querySelector('.testimonial-text');
+          var authorEl = card.querySelector('.testimonial-author');
+          var roleEl = card.querySelector('.testimonial-role');
+          if (textEl) textEl.textContent = '\u201c' + t.text + '\u201d';
+          if (authorEl) authorEl.innerHTML = t.name + ' &mdash; ' + t.role;
+          if (roleEl) roleEl.textContent = t.institution;
+        });
+      }
+      // Video testimonials
+      var vt = cfg.videoTestimonials;
+      if (vt) {
+        [1, 2].forEach(function(n) {
+          var el = document.getElementById('video-testimonial-' + n);
+          var v = vt[n - 1];
+          if (!el || !v) return;
+          el.setAttribute('data-youtube-id', v.youtubeId);
+          if (v.title) {
+            el.setAttribute('data-title', v.title);
+            el.setAttribute('aria-label', 'Play ' + v.title);
+          }
+        });
+      }
+    })
+    .catch(function(err) {
+      console.warn('[Enabelo Apps] content.json not loaded, using defaults.', err);
+    });
+}
+loadContent();
+
 // ===== DEMO MODAL =====
 function openDemoModal() {
   var modal = document.getElementById('demo-modal');
