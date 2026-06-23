@@ -1,5 +1,7 @@
 // ===== BUILD INFO =====
-console.log('[Enabelo Apps] Built: ' + __BUILD_DATE__ + ' | Commit: ' + __GIT_COMMIT__);
+var _buildDate = (typeof __BUILD_DATE__ !== 'undefined') ? __BUILD_DATE__ : 'dev';
+var _gitCommit = (typeof __GIT_COMMIT__ !== 'undefined') ? __GIT_COMMIT__ : 'local';
+console.log('[Enabelo Apps] Built: ' + _buildDate + ' | Commit: ' + _gitCommit);
 
 // ===== CONTENT CONFIG =====
 function loadContent() {
