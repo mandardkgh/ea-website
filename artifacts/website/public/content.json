@@ -1,0 +1,30 @@
+{
+  "explainerVideo": {
+    "youtubeId": "djJb-28bkmY",
+    "title": "Enabelo Apps — How It Works"
+  },
+  "textTestimonials": [
+    {
+      "text": "I am so happy to use Enabelo Apps. I am a German language teacher and I gave dictation to my student Vedant using Enabelo Apps and it was very well done by him. It is very useful and I am very happy with it!",
+      "name": "Dr. Kirti Vaidya",
+      "role": "German Language Teacher",
+      "institution": "German Department, SPPU, Pune"
+    },
+    {
+      "text": "We used to look for scribes all over the college but did not find any. Understanding this problem, Enabelo Apps has solved it and it will help us to write exams without scribes. Thank you!",
+      "name": "Salman Shakeel Sheikh",
+      "role": "College Student",
+      "institution": "A Large College, Pune"
+    }
+  ],
+  "videoTestimonials": [
+    {
+      "youtubeId": "XGLwIXgqcyQ",
+      "title": "Student Video Testimonial 1"
+    },
+    {
+      "youtubeId": "v-5UDXx1nj8",
+      "title": "Student Video Testimonial 2"
+    }
+  ]
+}

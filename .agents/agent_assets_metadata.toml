@@ -12,3 +12,9 @@ id = "bW2z2u71SyFwmduclbqzo"
 uri = "file://enabelo-apps-ea.zip"
 type = "unspecified"
 title = "enabelo-apps-ea.zip — Upload contents to /ea/ on IONOS"
+
+[[outputs]]
+id = "3Etdds-ehoEKUK2p2yFlC"
+uri = "file://artifacts/website/public/content.json"
+type = "unspecified"
+title = "content.json — edit and share back"
