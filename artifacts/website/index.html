@@ -7,14 +7,84 @@
   <meta name="description" content="Enabelo Apps empowers visually impaired and writing&#8209;disabled students to complete academic work and take exams independently using AI-powered voice technology. Patent pending in India.">
   <meta name="keywords" content="accessible education platform India, scribe alternative exam system India, AI for visually impaired students India, NAAC accessibility compliance tool, inclusive education software India">
   <meta property="og:title" content="Enabelo Apps — Independence. Dignity. Education.">
-  <meta property="og:description" content="A pioneering accessible educational platform for Visually Impaired and Writing-Disabled Students.">
+  <meta property="og:description" content="A pioneering accessible educational platform for Visually Impaired and Writing&#8209;Disabled Students.">
   <meta property="og:type" content="website">
+  <meta property="og:url" content="https://enabeloapps.com/">
+  <meta property="og:image" content="https://enabeloapps.com/opengraph.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Enabelo Apps — Independence. Dignity. Education.">
+  <meta name="twitter:description" content="AI-powered voice technology replacing scribes for visually impaired and writing&#8209;disabled students across India.">
+  <meta name="twitter:image" content="https://enabeloapps.com/opengraph.jpg">
   <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://enabeloapps.com/">
+  <meta name="build-date" content="__BUILD_DATE__">
+  <meta name="build-version" content="__GIT_COMMIT__">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/css/style.css">
   <link rel="icon" type="image/svg+xml" href="/images/favicon.svg">
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "name": "Zapurzaa Systems Pvt. Ltd.",
+        "url": "https://enabeloapps.com",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://enabeloapps.com/images/logo-enabelo.png"
+        },
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "email": "mandar@zapurzaasystems.com",
+          "contactType": "customer support",
+          "areaServed": "IN",
+          "availableLanguage": "English"
+        }
+      },
+      {
+        "@type": "WebSite",
+        "name": "Enabelo Apps",
+        "url": "https://enabeloapps.com",
+        "description": "AI-powered voice technology platform replacing scribes for visually impaired and writing-disabled students in India.",
+        "publisher": {
+          "@type": "Organization",
+          "name": "Zapurzaa Systems Pvt. Ltd."
+        }
+      },
+      {
+        "@type": "SoftwareApplication",
+        "name": "Enabelo Apps",
+        "applicationCategory": "EducationApplication",
+        "operatingSystem": "Web",
+        "description": "Voice-powered exam platform enabling visually impaired and writing-disabled students to complete academic work and exams independently, without a scribe. Covers 11 Indian and 4 foreign languages.",
+        "creator": {
+          "@type": "Organization",
+          "name": "Zapurzaa Systems Pvt. Ltd.",
+          "url": "https://enabeloapps.com"
+        },
+        "offers": {
+          "@type": "Offer",
+          "availability": "https://schema.org/InStock",
+          "areaServed": "IN"
+        }
+      }
+    ]
+  }
+  </script>
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-YXJ0YN7K23"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-YXJ0YN7K23');
+  </script>
 </head>
 <body>
   <a href="#main-content" class="skip-link">Skip to main content</a>
@@ -101,6 +171,21 @@
         &#8220;Independence in education is not a privilege. It is a right.&#8221;
       </div>
       <hr class="teal-divider">
+
+      <!-- EXPLAINER VIDEO -->
+      <section class="section section-alt" aria-labelledby="explainer-heading">
+        <div class="container" style="text-align:center">
+          <p class="section-label">Platform Demo</p>
+          <h2 id="explainer-heading" style="margin-bottom:var(--space-2)">See How It Works</h2>
+          <p class="lead" style="margin-bottom:var(--space-6);max-width:640px;margin-left:auto;margin-right:auto">Watch a short walkthrough of how visually impaired and writing&#8209;disabled students use Enabelo Apps to complete exams independently — without a scribe.</p>
+          <div id="explainer-video" class="video-placeholder" data-youtube-id="djJb-28bkmY" data-title="Enabelo Apps — Platform Explainer" onclick="loadYoutube(this)" role="button" tabindex="0" aria-label="Play Enabelo Apps explainer video" onkeypress="if(event.key==='Enter')loadYoutube(this)" style="max-width:820px;margin:0 auto;">
+            <div class="play-btn" aria-hidden="true">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+            </div>
+            <p>Enabelo Apps — Platform Walkthrough</p>
+          </div>
+        </div>
+      </section>
 
       <!-- SECTION 2: THE PROBLEM -->
       <section class="section" aria-labelledby="problem-heading">
@@ -439,31 +524,31 @@
 
           <h3 style="margin-bottom:var(--space-4)">What Institutions and Students Say</h3>
           <div class="grid grid-2" style="margin-bottom:var(--space-6)">
-            <div class="testimonial-card">
+            <div id="text-testimonial-1" class="testimonial-card">
               <p class="testimonial-text">"The application Enabelo Apps is an effective digital tool for supporting visually impaired learners in acquiring German as a foreign language. Its audio-based design shifts the focus from visual text to listening and speaking, thereby reducing accessibility barriers while strengthening communicative skills. The application supports equal learning opportunities for visually impaired learners. Features like flexible pacing, repeating questions, and revising answers make it easier to use and give learners more control. Overall, the app combines accessibility, assessment, and language learning, allowing visually impaired students to fully participate in learning and testing German."</p>
               <p class="testimonial-author">Dr. Kirti Vaidya &mdash; German Language Teacher</p>
               <p class="testimonial-role">German Department, SPPU, Pune</p>
             </div>
-            <div class="testimonial-card">
-              <p class="testimonial-text">[Testimonial #2 — content to be provided by the Enabelo Apps team.]</p>
-              <p class="testimonial-author">[Name, Designation]</p>
-              <p class="testimonial-role">[Institution Name, City]</p>
+            <div id="text-testimonial-2" class="testimonial-card">
+              <p class="testimonial-text">"We used to look for scribes all over the college but did not find any. Understanding this problem, Enabelo Apps has solved it and it will help us to write exams without scribes. Thank you!"</p>
+              <p class="testimonial-author">Salman Shakeel Sheikh &mdash; College Student</p>
+              <p class="testimonial-role">A Large College, Pune</p>
             </div>
           </div>
 
           <h3 style="margin-bottom:var(--space-4)">Video Testimonials</h3>
           <div class="grid grid-2">
-            <div class="video-placeholder" data-youtube-id="YOUTUBE_VIDEO_ID_1" onclick="loadYoutube(this)" role="button" tabindex="0" aria-label="Play video testimonial 1" onkeypress="if(event.key==='Enter')loadYoutube(this)">
+            <div id="video-testimonial-1" class="video-placeholder" data-youtube-id="XGLwIXgqcyQ" data-title="Enabelo Apps — Video Testimonial 1" onclick="loadYoutube(this)" role="button" tabindex="0" aria-label="Play video testimonial 1" onkeypress="if(event.key==='Enter')loadYoutube(this)">
               <div class="play-btn" aria-hidden="true">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg>
               </div>
-              <p>Video Testimonial #1<br><span style="font-size:.85rem;opacity:.65">(YouTube link to be added)</span></p>
+              <p>Video Testimonial #1</p>
             </div>
-            <div class="video-placeholder" data-youtube-id="YOUTUBE_VIDEO_ID_2" onclick="loadYoutube(this)" role="button" tabindex="0" aria-label="Play video testimonial 2" onkeypress="if(event.key==='Enter')loadYoutube(this)">
+            <div id="video-testimonial-2" class="video-placeholder" data-youtube-id="v-5UDXx1nj8" data-title="Enabelo Apps — Video Testimonial 2" onclick="loadYoutube(this)" role="button" tabindex="0" aria-label="Play video testimonial 2" onkeypress="if(event.key==='Enter')loadYoutube(this)">
               <div class="play-btn" aria-hidden="true">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg>
               </div>
-              <p>Video Testimonial #2<br><span style="font-size:.85rem;opacity:.65">(YouTube link to be added)</span></p>
+              <p>Video Testimonial #2</p>
             </div>
           </div>
         </div>
